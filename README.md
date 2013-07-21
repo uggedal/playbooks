@@ -14,6 +14,14 @@ following variables before you can run `ansible-playbook` with:
 ansible-playbook -i ../private-inventory/hosts site.yml
 ```
 
+### pacman
+
+```yaml
+pacman_repos:
+  - name: myrepo
+    url: http://repo.myhost.com
+```
+
 Bootstrap
 ---------
 
