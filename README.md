@@ -31,7 +31,7 @@ pacman_repos:
     url: http://repo.myhost.com
 
 pacman_mirrors:
-  - https://archlinux.limun.org
+  - https://mirrors.kernel.org/archlinux/
 ```
 
 ### ssh
