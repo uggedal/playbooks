@@ -3,6 +3,17 @@ Playbooks
 
 [Ansible][a] playbooks for [uggedal.com][u]. Developed for Arch Linux.
 
+Inventory
+---------
+
+The inventory hosts file and variables are kept private. To use these
+playbooks you'll need to create your own hosts file and provide the
+following variables before you can run `ansible-playbook` with:
+
+```sh
+ansible-playbook -i ../private-inventory/hosts site.yml
+```
+
 Bootstrap
 ---------
 
