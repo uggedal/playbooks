@@ -109,5 +109,10 @@ them.
    ssh-copy-id root@yourhost
    ```
 
+License
+-------
+
+MIT
+
 [a]: http://ansibleworks.com/
 [u]: http://uggedal.com/
