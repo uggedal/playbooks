@@ -13,7 +13,7 @@ them.
 
 1. Create a new VM with Arch Linux and boot it.
 2. SSH into it and execute the following:
-   ```shell
+   ```sh
    # Fix root fs mount options
    sed 's/rw,relatime,errors=continue,barrier=0,data=writeback/defaults,noatime,barrier=0/' -i /etc/fstab
 
@@ -54,6 +54,7 @@ them.
    ```
 3. Edit the configuration profile and change the kernel to `pv-grub-x86_64`.
 4. Reboot.
+   ```
 
 [a]: http://ansibleworks.com/
 [u]: http://uggedal.com/
