@@ -1,0 +1,4 @@
+---
+
+- name: install iptables
+  pacman: name=iptables state=installed
