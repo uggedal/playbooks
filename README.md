@@ -31,8 +31,10 @@ them.
    sed 's/SigLevel = Never/SigLevel    = Required DatabaseOptional/' -i /etc/pacman.conf
    pacman-key --populate archlinux
 
-   # Install distro kernel
+   # Update system
    pacman -Su --noconfirm
+
+   # Install distro kernel
    pacman -S linux
 
    # Create PV-GRUB config
