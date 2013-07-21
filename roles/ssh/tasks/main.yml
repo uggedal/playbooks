@@ -2,3 +2,13 @@
 
 - name: install openssh
   pacman: name=openssh state=installed
+
+- name: enable sshd socket
+  command: /usr/bin/systemctl enable sshd.socket
+           creates=/etc/systemd/system/sockets.target.wants/sshd.socket
+
+- name: start sshd socket
+  service: name=sshd.socket state=started
+
+- name: stop and disable sshd service
+  service: name=sshd state=stopped enabled=no
