@@ -1,0 +1,4 @@
+---
+
+- name: Configure pacman
+  template: src=pacman.conf.j2 dest=/etc/pacman.conf
