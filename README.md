@@ -20,6 +20,9 @@ ansible-playbook -i ../private-inventory/hosts site.yml
 pacman_repos:
   - name: myrepo
     url: http://repo.myhost.com
+
+pacman_mirrors:
+  - https://archlinux.limun.org
 ```
 
 Bootstrap
