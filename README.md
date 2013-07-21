@@ -34,6 +34,13 @@ pacman_mirrors:
   - https://archlinux.limun.org
 ```
 
+### ssh
+
+```yml
+ssh_allow_users:
+  - root
+```
+
 Bootstrap
 ---------
 
