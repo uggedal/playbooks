@@ -41,6 +41,18 @@ ssh_allow_users:
   - root
 ```
 
+### iptables
+
+```yml
+iptables_accept_tcp:
+  - port: 80
+    source: null
+  - port: 22
+    source: limit
+  - port: 25
+    source: 127.0.0.1
+```
+
 Bootstrap
 ---------
 
