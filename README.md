@@ -54,6 +54,9 @@ them.
    ```
 3. Edit the configuration profile and change the kernel to `pv-grub-x86_64`.
 4. Reboot.
+5. Copy your ssh public key to the new VM:
+   ```sh
+   ssh-copy-id root@yourhost
    ```
 
 [a]: http://ansibleworks.com/
