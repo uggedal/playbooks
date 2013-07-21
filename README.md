@@ -48,7 +48,7 @@ iptables_accept_tcp:
   - port: 80
     source: null      # Allow from all sources
   - port: 22
-    source: limit     # Limit to 3 connections within 30 seconds
+    source: limit     # Limit to 10 connections within 30 seconds
   - port: 25
     source: 127.0.0.1 # Allow only from the given source
 ```

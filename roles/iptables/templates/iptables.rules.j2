@@ -19,7 +19,7 @@
 -A TCP -p tcp -m multiport --dports {{ rules|map(attribute='port')|join(",") }} -j ACCEPT
 {% elif source == 'limit' %}
 {% for rule in rules %}
--A TCP -p tcp --dport {{ rule.port }} -m recent --update --name limit-tcp-{{ rule.port}} --hitcount 3 --seconds 30 -j REJECT --reject-with icmp-port-unreachable
+-A TCP -p tcp --dport {{ rule.port }} -m recent --update --name limit-tcp-{{ rule.port}} --hitcount 10 --seconds 30 -j REJECT --reject-with icmp-port-unreachable
 -A TCP -p tcp --dport {{ rule.port }} -m recent --set --name limit-tcp-{{ rule.port}} -j ACCEPT
 {% endfor %}
 {% else %}
