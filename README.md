@@ -17,6 +17,13 @@ ansible-playbook -i ../private-inventory/hosts site.yml
 By creating `group_vars` and `host_vars` files relative to the hosts file
 you can provide the following variables:
 
+### ansible
+
+```yml
+ansible_python_interpreter: /usr/bin/python2
+```
+
+
 ### pacman
 
 ```yml
