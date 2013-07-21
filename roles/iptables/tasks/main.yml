@@ -1,3 +1,14 @@
 ---
 
-- include: iptables.yml tags=iptables
+- name: install iptables
+  pacman: name=iptables state=installed
+  tags: iptables
+
+- name: configure iptables rules
+  template: src=iptables.rules.j2 dest=/etc/iptables/iptables.rules
+  notify: reload iptables
+  tags: iptables
+
+- name: start and enable iptables
+  service: name=iptables state=started enabled=yes
+  tags: iptables
