@@ -46,11 +46,11 @@ ssh_allow_users:
 ```yml
 iptables_accept_tcp:
   - port: 80
-    source: null
+    source: null      # Allow from all sources
   - port: 22
-    source: limit
+    source: limit     # Limit to 3 connections within 30 seconds
   - port: 25
-    source: 127.0.0.1
+    source: 127.0.0.1 # Allow only from the given source
 ```
 
 Bootstrap
