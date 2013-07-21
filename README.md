@@ -46,7 +46,7 @@ them.
 
    # Install Ansible dependency
    pacman -S --noconfirm python2
-  ```
+   ```
 
 [a]: http://ansibleworks.com/
 [u]: http://uggedal.com/
