@@ -11,6 +11,9 @@ Bootstrap
 1. Create a new VM with Arch Linux and boot it.
 2. SSH into it and execute the following:
 
+    # Select the closest/fastest pacman mirror
+    echo 'Server = https://archlinux.limun.org/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+
     # Initialize pacman keyring
     pacman -Sy
     sed 's/SigLevel    = Required DatabaseOptional/SigLevel = Never/' -i /etc/pacman.conf
