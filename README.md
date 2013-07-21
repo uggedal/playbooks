@@ -6,13 +6,16 @@ Playbooks
 Inventory
 ---------
 
-The inventory hosts file and variables are kept private. To use these
-playbooks you'll need to create your own hosts file and provide the
-following variables before you can run `ansible-playbook` with:
+Inventory hosts file and variables are kept private. To use these
+playbooks you'll need to create your own hosts file before you can run
+`ansible-playbook` with:
 
 ```sh
 ansible-playbook -i ../private-inventory/hosts site.yml
 ```
+
+By creating `group_vars` and `host_vars` files relative to the hosts file
+you can provide the following variables:
 
 ### pacman
 
