@@ -23,7 +23,6 @@ you can provide the following variables:
 ansible_python_interpreter: /usr/bin/python2
 ```
 
-
 ### pacman
 
 ```yml
