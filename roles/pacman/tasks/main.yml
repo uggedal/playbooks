@@ -2,3 +2,6 @@
 
 - name: pacman config
   template: src=pacman.conf.j2 dest=/etc/pacman.conf
+
+- name: pacman mirrors
+  template: src=mirrorlist.j2 dest=/etc/pacman.d/mirrorlist
