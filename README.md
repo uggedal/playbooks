@@ -19,7 +19,7 @@ you can provide the following variables:
 
 ### pacman
 
-```yaml
+```yml
 pacman_repos:
   - name: myrepo
     url: http://repo.myhost.com
