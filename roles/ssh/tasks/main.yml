@@ -1,3 +1,22 @@
 ---
 
-- include: ssh.yml tags=ssh
+- name: install openssh
+  pacman: name=openssh state=installed
+  tags: ssh
+
+- name: configure sshd
+  template: src=sshd_config.j2 dest=/etc/ssh/sshd_config
+  tags: ssh
+
+- name: enable sshd socket
+  command: /usr/bin/systemctl enable sshd.socket
+           creates=/etc/systemd/system/sockets.target.wants/sshd.socket
+  tags: ssh
+
+- name: start sshd socket
+  service: name=sshd.socket state=started
+  tags: ssh
+
+- name: stop and disable sshd service
+  service: name=sshd state=stopped enabled=no
+  tags: ssh
