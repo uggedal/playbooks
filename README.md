@@ -40,10 +40,10 @@ Bootstrap
    kernel /boot/vmlinuz-linux root=/dev/xvda ro ipv6.disable_ipv6=1 init=/usr/lib/systemd/systemd
    initrd /boot/initramfs-linux.img
    EOF
-  ```
 
-# Install Ansible dependency
-pacman -S --noconfirm python2
+   # Install Ansible dependency
+   pacman -S --noconfirm python2
+  ```
 
 [a]: http://ansibleworks.com/
 [u]: http://uggedal.com/
