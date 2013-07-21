@@ -22,5 +22,9 @@ Bootstrap
    sed 's/SigLevel = Never/SigLevel    = Required DatabaseOptional/' -i /etc/pacman.conf
    pacman-key --populate archlinux
 
+   # Install distro kernel
+   pacman -Su --noconfirm
+   pacman -S linux
+
 [a]: http://ansibleworks.com/
 [u]: http://uggedal.com/
