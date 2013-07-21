@@ -26,5 +26,17 @@ Bootstrap
    pacman -Su --noconfirm
    pacman -S linux
 
+   # Create PV-GRUB config
+   mkdir -p /boot/grub
+   cat << 'EOF' > /boot/grub/menu.lst
+   timeout 0
+   default 0
+
+   title  Arch Linux  [/boot/vmlinuz-linux]
+   root   (hd0)
+   kernel /boot/vmlinuz-linux root=/dev/xvda ro ipv6.disable_ipv6=1 init=/usr/lib/systemd/systemd
+   initrd /boot/initramfs-linux.img
+   EOF
+
 [a]: http://ansibleworks.com/
 [u]: http://uggedal.com/
