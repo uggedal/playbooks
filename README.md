@@ -6,6 +6,9 @@ Playbooks
 Bootstrap
 ---------
 
+Most hosts needs some manual bootstrap before Ansible can take over managing
+them.
+
 ### Linode
 
 1. Create a new VM with Arch Linux and boot it.
