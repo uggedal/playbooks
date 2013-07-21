@@ -47,6 +47,8 @@ them.
    # Install Ansible dependency
    pacman -S --noconfirm python2
    ```
+3. Edit the configuration profile and change the kernel to `pv-grub-x86_64`.
+4. Reboot.
 
 [a]: http://ansibleworks.com/
 [u]: http://uggedal.com/
