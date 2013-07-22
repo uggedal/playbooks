@@ -1,0 +1,6 @@
+---
+
+- name: set hostname
+  copy: content={{ inventory_hostname + "\n" }} dest=/etc/hostname
+  notify: update hostname
+  tags: systemd
