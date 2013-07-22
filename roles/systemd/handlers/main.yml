@@ -2,3 +2,6 @@
 
 - name: update hostname
   command: /usr/bin/hostnamectl set-hostname {{ inventory_hostname }}
+
+- name: update timezone
+  command: /usr/bin/timedatectl set-timezone {{ systemd_timezone }}
