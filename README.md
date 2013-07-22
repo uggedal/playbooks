@@ -23,6 +23,12 @@ you can provide the following variables:
 ansible_python_interpreter: /usr/bin/python2
 ```
 
+### systemd
+
+```yml
+systemd_timezone: Europe/Oslo
+```
+
 ### pacman
 
 ```yml
