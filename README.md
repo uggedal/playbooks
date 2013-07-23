@@ -34,6 +34,7 @@ systemd_locales:
  - name: nb_NO.UTF-8
    charset: UTF-8
    default: false
+systemd_journal_max_size: 100M
 ```
 
 ### pacman
