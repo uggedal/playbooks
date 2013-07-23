@@ -27,6 +27,13 @@ ansible_python_interpreter: /usr/bin/python2
 
 ```yml
 systemd_timezone: Europe/Oslo
+systemd_locales:
+ - name: en_US.UTF-8
+   charset: UTF-8
+   default: true
+ - name: nb_NO.UTF-8
+   charset: UTF-8
+   default: false
 ```
 
 ### pacman
