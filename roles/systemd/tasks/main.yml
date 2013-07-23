@@ -9,3 +9,8 @@
   template: src=timezone.j2 dest=/etc/timezone
   notify: update timezone
   tags: systemd
+
+- name: set available locales
+  template: src=locale.gen.j2 dest=/etc/locale.gen
+  notify: generate locales
+  tags: systemd

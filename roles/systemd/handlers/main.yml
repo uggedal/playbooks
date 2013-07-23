@@ -5,3 +5,6 @@
 
 - name: update timezone
   command: /usr/bin/timedatectl set-timezone {{ systemd_timezone }}
+
+- name: generate locales
+  command: /usr/bin/locale-gen
