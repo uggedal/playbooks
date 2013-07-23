@@ -35,6 +35,7 @@ systemd_locales:
    charset: UTF-8
    default: false
 systemd_journal_max_size: 100M
+systemd_logind_ignore_lid_switch: true
 ```
 
 ### pacman
