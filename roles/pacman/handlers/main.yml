@@ -1,4 +1,4 @@
 ---
 
-- name: refresh pacman
-  command: /usr/bin/pacman --sync --refresh --refresh
+- name: fully refresh pacman
+  pacmandb: state=fully-refreshed

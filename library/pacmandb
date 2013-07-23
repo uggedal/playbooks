@@ -1,0 +1,56 @@
+#!/usr/bin/python
+
+DOCUMENTATION = '''
+---
+module: pacmandb
+short_description: Manage the pacman db
+description:
+  - Manage the pacman db
+version_added: "1.2"
+options:
+  state:
+    description:
+      - The state of the db (refreshed or fully-refreshed)
+    required: true
+author: Eivind Uggedal
+'''
+
+EXAMPLES = '''
+# Refresh the db
+pacmandb state=refreshed
+
+# Fully refresh the db
+pacmandb state=fully-refreshed
+'''
+
+def refresh(module, full=False):
+    flags = 'Syy' if full else 'Sy'
+    operation = 'fully refresh' if full else 'refresh'
+
+    rc, out, err = module.run_command("pacman -%s > /dev/null" % flags)
+
+    if rc != 0:
+        return module.fail_json(msg="could not %s package db" % operation)
+
+    module.exit_json(changed=True, msg="%s package db" % operation)
+
+def main():
+    module = AnsibleModule(
+            argument_spec = {
+                'state': {
+                    'choices': ['refreshed', 'fully-refreshed']
+                    }
+                }
+            )
+
+    state = module.params['state']
+
+    if state == 'refreshed':
+        refresh(module)
+    elif state == 'fully-refreshed':
+        refresh(module, full=True)
+
+# this is magic, see lib/ansible/module_common.py
+#<<INCLUDE_ANSIBLE_MODULE_COMMON>>
+
+main()
