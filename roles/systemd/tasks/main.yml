@@ -27,3 +27,8 @@
   template: src=journald.conf.j2 dest=/etc/systemd/journald.conf
   notify: restart journald
   tags: systemd
+
+- name: configure logind
+  template: src=journald.conf.j2 dest=/etc/systemd/journald.conf
+  notify: restart logind
+  tags: systemd
