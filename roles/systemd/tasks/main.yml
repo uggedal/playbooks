@@ -18,3 +18,7 @@
 - name: set default locale
   template: src=locale.conf.j2 dest=/etc/locale.conf
   tags: systemd
+
+- name: persist journal
+  file: path=/var/log/journal state=directory
+  tags: systemd
