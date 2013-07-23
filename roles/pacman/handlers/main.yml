@@ -1,0 +1,4 @@
+---
+
+- name: refresh pacman
+  command: /usr/bin/pacman --sync --refresh --refresh
