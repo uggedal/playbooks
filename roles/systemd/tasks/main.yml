@@ -14,3 +14,7 @@
   template: src=locale.gen.j2 dest=/etc/locale.gen
   notify: generate locales
   tags: systemd
+
+- name: set default locale
+  template: src=locale.conf.j2 dest=/etc/locale.conf
+  tags: systemd
