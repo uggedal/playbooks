@@ -8,3 +8,6 @@
 
 - name: generate locales
   command: /usr/bin/locale-gen
+
+- name: restart journald
+  service: name=systemd-journald state=restarted

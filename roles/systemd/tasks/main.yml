@@ -22,3 +22,8 @@
 - name: persist journal
   file: path=/var/log/journal state=directory
   tags: systemd
+
+- name: configure journald
+  template: src=journald.conf.j2 dest=/etc/systemd/journald.conf
+  notify: restart journald
+  tags: systemd
