@@ -10,18 +10,34 @@ version_added: "1.2"
 options:
   state:
     description:
-      - The state of the db (refreshed or fully-refreshed)
+      - The state of the db (no-orphans, refreshed or fully-refreshed)
     required: true
 author: Eivind Uggedal
 '''
 
 EXAMPLES = '''
+# Remove all orphaned packages
+pacmandb state=no-orphans
+
 # Refresh the db
 pacmandb state=refreshed
 
 # Fully refresh the db
 pacmandb state=fully-refreshed
 '''
+
+def remove_orphans(module):
+    rc, out, __ = module.run_command('pacman -Qdtq')
+    if rc != 0:
+        return module.exit_json(changed=False, msg='no orphaned packages')
+
+    packages = ' '.join(out.split("\n"))
+
+    rc, _, __ = module.run_command("pacman -Rs --noconfirm %s" % packages)
+    if rc != 0:
+        return module.fail_json(msg='could not remove orphaned packages')
+    module.exit_json(changed=True, msg='removed orphaned packages')
+
 
 def refresh(module, full=False):
     flags = 'Syy' if full else 'Sy'
@@ -38,14 +54,16 @@ def main():
     module = AnsibleModule(
             argument_spec = {
                 'state': {
-                    'choices': ['refreshed', 'fully-refreshed']
+                    'choices': ['no-orphans', 'refreshed', 'fully-refreshed']
                     }
                 }
             )
 
     state = module.params['state']
 
-    if state == 'refreshed':
+    if state == 'no-orphans':
+        remove_orphans(module)
+    elif state == 'refreshed':
         refresh(module)
     elif state == 'fully-refreshed':
         refresh(module, full=True)

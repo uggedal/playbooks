@@ -9,3 +9,7 @@
   template: src=mirrorlist.j2 dest=/etc/pacman.d/mirrorlist
   notify: fully refresh pacman
   tags: pacman
+
+- name: remove pacman orphans
+  pacmandb: state=no-orphans
+  tags: pacman
