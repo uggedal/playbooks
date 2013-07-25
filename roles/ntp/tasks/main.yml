@@ -1,0 +1,5 @@
+---
+
+- name: install ntp
+  pacman: name=ntp state=installed
+  tags: ntp
