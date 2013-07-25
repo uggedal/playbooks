@@ -14,16 +14,23 @@ playbooks you'll need to create your own hosts file before you can run
 ansible-playbook -i ../private-inventory/hosts site.yml
 ```
 
+### Groups
+
+The `servers` and `laptops` groups are used to differente behavior
+within some roles:
+
+### Variables
+
 By creating `group_vars` and `host_vars` files relative to the hosts file
 you can provide the following variables:
 
-### ansible
+#### ansible
 
 ```yml
 ansible_python_interpreter: /usr/bin/python2
 ```
 
-### systemd
+#### systemd
 
 ```yml
 systemd_timezone: Europe/Oslo
@@ -38,7 +45,7 @@ systemd_journal_max_size: 100M
 systemd_logind_ignore_lid_switch: true
 ```
 
-### pacman
+#### pacman
 
 ```yml
 pacman_repos:
@@ -49,14 +56,14 @@ pacman_mirrors:
   - https://mirrors.kernel.org/archlinux/
 ```
 
-### ssh
+#### ssh
 
 ```yml
 ssh_allow_users:
   - root
 ```
 
-### iptables
+#### iptables
 
 ```yml
 iptables_accept_tcp:
