@@ -8,3 +8,8 @@
   service: name=ntpd state=started enabled=yes
   when: "'servers' in group_names"
   tags: ntp
+
+- name: start and enable ntpdate
+  service: name=ntpdate state=started enabled=yes
+  when: "'laptops' in group_names"
+  tags: ntp
