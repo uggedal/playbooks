@@ -9,3 +9,4 @@
   - pacman
   - ssh
   - iptables
+  - ntp
