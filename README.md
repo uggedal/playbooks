@@ -22,7 +22,7 @@ within some roles:
 #### ntp
 
 `servers` will strart and enable the `ntpd` service while `laptops` will
-enable and run the `ntpdate` *omeshot* service on boot.
+enable and run the `ntpdate` *oneshot* service on boot.
 
 ### Variables
 
