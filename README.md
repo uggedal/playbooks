@@ -19,6 +19,11 @@ ansible-playbook -i ../private-inventory/hosts site.yml
 The `servers` and `laptops` groups are used to differente behavior
 within some roles:
 
+#### ntp
+
+`servers` will strart and enable the `ntpd` service while `laptops` will
+enable and run the `ntpdate` *omeshot* service on boot.
+
 ### Variables
 
 By creating `group_vars` and `host_vars` files relative to the hosts file
