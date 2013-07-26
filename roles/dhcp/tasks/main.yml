@@ -3,3 +3,7 @@
 - name: install dhcpcd
   pacman: name=dhcpcd state=installed
   tags: dhcp
+
+- name: start and enable dhcpcd service
+  service: name=dhcpcd@eth0 state=running enabled=yes
+  tags: dhcp
