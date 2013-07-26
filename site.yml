@@ -10,3 +10,9 @@
   - ssh
   - iptables
   - ntp
+
+- hosts: servers
+  user: root
+  gather_facts: no
+  roles:
+  - dhcp
