@@ -1,0 +1,5 @@
+---
+
+- name: install dhcpcd
+  pacman: name=dhcpcd state=installed
+  tags: dhcp
