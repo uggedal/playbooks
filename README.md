@@ -80,6 +80,12 @@ iptables_accept_tcp:
     source: 127.0.0.1 # Allow only from the given source
 ```
 
+#### dhcp
+
+```yml
+dhcp_interface: eth0
+```
+
 Bootstrap
 ---------
 
