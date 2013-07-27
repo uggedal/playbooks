@@ -1,0 +1,7 @@
+---
+
+- name: configure pam limits
+  template: src=limits.conf.j2 dest=/etc/security/limits.conf
+  tags: pam
+
+
