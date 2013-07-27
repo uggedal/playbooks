@@ -21,3 +21,7 @@
 - name: create nginx conf.d
   file: name=/etc/nginx/conf.d state=directory
   tags: nginx
+
+- name: start and enable nginx
+  service: name=nginx state=started enabled=yes
+  tags: nginx
