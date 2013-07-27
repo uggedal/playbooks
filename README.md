@@ -92,6 +92,13 @@ dhcp_interface: eth0
 pam_limits_nofile: 50000
 ```
 
+#### ngimx
+
+```yml
+nginx_worker_user: http
+nginx_worker_processes: 2
+```
+
 Bootstrap
 ---------
 
