@@ -1,0 +1,44 @@
+user {{ nginx_worker_user }};
+worker_processes  {{ nginx_worker_processes }};
+
+error_log  /var/log/nginx/error.log;
+
+pcre_jit   on;
+
+events {
+  worker_connections  1024;
+  accept_mutex {% if nginx_worker_processes > 1 %}on{% else %}off{% endif %};
+  use epoll;
+}
+
+
+http {
+  include       mime.types;
+  default_type  application/octet-stream;
+
+  charset utf-8;
+
+  sendfile on;
+  tcp_nopush on;
+  tcp_nodelay off;
+
+  gzip  on;
+  gzip_http_version 1.0;
+  gzip_comp_level 2;
+  gzip_min_length 512;
+  gzip_buffers 16 8k;
+  gzip_types text/plain text/xml text/css
+             text/comma-separated-values
+             text/javascript application/x-javascript application/json
+             application/xml application/xml+rss application/atom+xml
+             application/vnd.ms-fontobject application/x-font-ttf
+             font/opentype;
+
+  gzip_static on;
+  gzip_proxied        expired no-cache no-store private auth;
+  gzip_vary           on;
+
+  server_names_hash_bucket_size 64;
+
+  include /etc/nginx/conf.d/*.conf;
+}
