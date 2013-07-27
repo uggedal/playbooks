@@ -17,3 +17,7 @@
 - name: configure nginx logrotate
   copy: src=logrotate.conf dest=/etc/logrotate.d/logrotate.conf
   tags: nginx
+
+- name: create nginx conf.d
+  file: name=/etc/nginx/conf.d state=directory
+  tags: nginx
