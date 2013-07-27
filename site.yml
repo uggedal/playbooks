@@ -18,3 +18,9 @@
   roles:
   - dhcp
   - pam
+
+- hosts: webservers
+  user: root
+  gather_facts: no
+  roles:
+  - nginx
