@@ -1,0 +1,5 @@
+---
+
+- name: install nginx
+  pacman: name=nginx state=installed
+  tags: nginx
