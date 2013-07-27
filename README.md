@@ -86,6 +86,12 @@ iptables_accept_tcp:
 dhcp_interface: eth0
 ```
 
+#### pam
+
+```yml
+pam_limits_nofile: 50000
+```
+
 Bootstrap
 ---------
 
