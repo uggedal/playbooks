@@ -13,3 +13,7 @@
   copy: src=mime.types dest=/etc/nginx/mime.types
   notify: reload nginx
   tags: nginx
+
+- name: configure nginx logrotate
+  copy: src=logrotate.conf dest=/etc/logrotate.d/logrotate.conf
+  tags: nginx
