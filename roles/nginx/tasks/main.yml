@@ -22,6 +22,10 @@
   file: name=/etc/nginx/conf.d state=directory
   tags: nginx
 
+- name: create http root
+  file: name=/srv/http state=directory owner=root group=http mode=750
+  tags: nginx
+
 - name: start and enable nginx
   service: name=nginx state=started enabled=yes
   tags: nginx
