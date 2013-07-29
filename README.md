@@ -97,6 +97,15 @@ pam_limits_nofile: 50000
 ```yml
 nginx_worker_user: http
 nginx_worker_processes: 2
+nginx_sites:
+  - fqdn: mysite.com
+    aliases:
+      - www.mysite.com
+    default: true
+    root: /srv/http/mysite
+    uwsgi: true
+    upstreams: ["unix:/var/run/uwsgi/mysite.sock"]
+    static_prefix: /static
 ```
 
 Bootstrap
