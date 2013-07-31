@@ -19,7 +19,7 @@
   - dhcp
   - pam
 
-- hosts: webservers
+- hosts: httpservers
   user: root
   gather_facts: no
   roles:
