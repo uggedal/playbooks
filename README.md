@@ -92,6 +92,12 @@ dhcp_interface: eth0
 pam_limits_nofile: 50000
 ```
 
+#### uwsgi
+
+```yml
+uwsgi_user: http
+```
+
 #### nginx
 
 ```yml
