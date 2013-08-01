@@ -5,5 +5,6 @@
   tags: uwsgi
 
 - name: create uwsgi conf directory
-  file: name=/etc/uwsgi state=directory owner=http group=http mode=640
+  file: name=/etc/uwsgi state=directory
+        owner={{ uwsgi_user }} group={{ uwsgi_user }} mode=640
   tags: uwsgi
