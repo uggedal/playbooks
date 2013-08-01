@@ -19,6 +19,12 @@
   - dhcp
   - pam
 
+- hosts: wsgiservers
+  user: root
+  gather_facts: no
+  roles:
+  - uwsgi
+
 - hosts: httpservers
   user: root
   gather_facts: no
