@@ -1,0 +1,5 @@
+---
+
+- name: install uwsgi
+  pacman: name=uwsgi state=installed
+  tags: uwsgi
