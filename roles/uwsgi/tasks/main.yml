@@ -8,3 +8,8 @@
   file: name=/etc/uwsgi state=directory
         owner={{ uwsgi_user }} group={{ uwsgi_user }} mode=640
   tags: uwsgi
+
+- name: create uwsgi common config
+  template: src=common.ini.j2 dest=/etc/uwsgi/common.ini
+            owner={{ uwsgi_user }} group={{ uwsgi_user }} mode=640
+  tags: uwsgi

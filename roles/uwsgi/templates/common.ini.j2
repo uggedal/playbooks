@@ -1,0 +1,20 @@
+[uwsgi]
+
+; Start a master process to manage all workers:
+master = true
+
+; Drop privileges to the same uid/gid as nginx:
+uid = {{ uwsgi_user }}
+gid = {{ uwsgi_user }}
+
+; Ony allow access to sockets for {{ uwsgi_user }} uid/gid:
+chmod-socket = 660
+
+; Nicer process names:
+auto-procname = true
+
+; Disable request logging (access log of nginx suffices):
+disable-logging = true
+
+; Prefix all log statements with a date formatted in common log format:
+log-date = [%%d/%%b/%%Y:%%H:%%M:%%S %%z]
