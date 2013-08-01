@@ -3,3 +3,7 @@
 - name: install uwsgi
   pacman: name=uwsgi state=installed
   tags: uwsgi
+
+- name: create uwsgi conf directory
+  file: name=/etc/uwsgi state=directory owner=http group=http mode=640
+  tags: uwsgi
