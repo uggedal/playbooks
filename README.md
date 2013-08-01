@@ -92,7 +92,7 @@ dhcp_interface: eth0
 pam_limits_nofile: 50000
 ```
 
-#### ngimx
+#### nginx
 
 ```yml
 nginx_worker_user: http
