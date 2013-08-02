@@ -13,12 +13,3 @@
   template: src=common.ini.j2 dest=/etc/uwsgi/common.ini
             owner={{ uwsgi_user }} group={{ uwsgi_user }} mode=640
   tags: uwsgi
-
-- name: create uwsgi log directory
-  file: name=/var/log/uwsgi state=directory
-        owner={{ uwsgi_user }} group=log
-  tags: uwsgi
-
-- name: configure uwsgi logrotate
-  copy: src=logrotate.conf dest=/etc/logrotate.d/uwsgi
-  tags: uwsgi
