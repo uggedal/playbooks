@@ -141,7 +141,7 @@ iptables_accept:
 
 ##### interface
 
-Which interface unser `/dev` to brimg up with `dhcpcd`.
+Which interface under `/dev` to brimg up with `dhcpcd`.
 
 ```yml
 dhcp_interface: eth0
