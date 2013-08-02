@@ -149,6 +149,10 @@ dhcp_interface: eth0
 
 #### pam
 
+##### limits nofile
+
+PAM `ulimit(1)` setting for hard and soft limit of number of open files.
+
 ```yml
 pam_limits_nofile: 50000
 ```
