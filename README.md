@@ -44,20 +44,15 @@ ansible_python_interpreter: /usr/bin/python2
 
 Your timezone as found in `/usr/share/zoneinfo`.
 
+```yml
+systemd_timezone: Europe/Oslo
+```
+
 ##### locales
 
 A list of available locales. Set `default` to `true` for your default locale.
 
-##### journal max size
-
-Set an upper file size for the systemd journal.
-
-##### logind ignore lid switch
-
-Set to `true` if you want closing the lid of your laptop to be a noop.
-
 ```yml
-systemd_timezone: Europe/Oslo
 systemd_locales:
  - name: en_US.UTF-8
    charset: UTF-8
@@ -65,7 +60,21 @@ systemd_locales:
  - name: nb_NO.UTF-8
    charset: UTF-8
    default: false
+```
+
+##### journal max size
+
+Set an upper file size for the systemd journal.
+
+```yml
 systemd_journal_max_size: 100M
+```
+
+##### logind ignore lid switch
+
+Set to `true` if you want closing the lid of your laptop to be a noop.
+
+```yml
 systemd_logind_ignore_lid_switch: true
 ```
 
