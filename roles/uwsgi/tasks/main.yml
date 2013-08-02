@@ -18,3 +18,7 @@
   file: name=/var/log/uwsgi state=directory
         owner={{ uwsgi_user }} group=log
   tags: uwsgi
+
+- name: configure uwsgi logrotate
+  copy: src=logrotate.conf dest=/etc/logrotate.d/uwsgi
+  tags: uwsgi
