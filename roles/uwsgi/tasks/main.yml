@@ -27,3 +27,9 @@
             owner={{ uwsgi_user }} group={{ uwsgi_user }} mode=640
   with_items: uwsgi_services
   tags: uwsgi
+
+- name: enable uwsgi service sockets
+  command: /usr/bin/systemctl enable uwsgi@{{ item.name }}.socket
+           creates=/etc/systemd/system/sockets.target.wants/uwsgi@{{ item.name }}.socket
+  with_items: uwsgi_services
+  tags: uwsgi
