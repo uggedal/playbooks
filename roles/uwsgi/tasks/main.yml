@@ -1,7 +1,10 @@
 ---
 
-- name: install uwsgi
-  pacman: name=uwsgi state=installed
+- name: install uwsgi with python2 support
+  pacman: name={{ item }} state=installed
+  with_items:
+    - uwsgi
+    - uwsgi-plugin-python2
   tags: uwsgi
 
 - name: create uwsgi conf directory
