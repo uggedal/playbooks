@@ -48,6 +48,10 @@ Your timezone as found in `/usr/share/zoneinfo`.
 
 A list of available locales. Set `default` to `true` for your default locale.
 
+##### journal max size
+
+Set an upper file size for the systemd journal.
+
 ```yml
 systemd_timezone: Europe/Oslo
 systemd_locales:
