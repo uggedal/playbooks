@@ -52,6 +52,10 @@ A list of available locales. Set `default` to `true` for your default locale.
 
 Set an upper file size for the systemd journal.
 
+##### logind ignore lid switch
+
+Set to `true` if you want closing the lid of your laptop to be a noop.
+
 ```yml
 systemd_timezone: Europe/Oslo
 systemd_locales:
