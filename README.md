@@ -71,6 +71,11 @@ systemd_logind_ignore_lid_switch: true
 
 #### pacman
 
+##### repos
+
+A list of custom pacman repositories. The package signature level will be
+optional for these.
+
 ```yml
 pacman_repos:
   - name: myrepo
