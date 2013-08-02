@@ -15,7 +15,7 @@
   tags: nginx
 
 - name: configure nginx logrotate
-  copy: src=logrotate.conf dest=/etc/logrotate.d/logrotate.conf
+  copy: src=logrotate.conf dest=/etc/logrotate.d/nginx
   tags: nginx
 
 - name: create nginx conf.d
