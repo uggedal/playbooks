@@ -110,13 +110,19 @@ ssh_allow_users:
 #### iptables
 
 ```yml
-iptables_accept_tcp:
+iptables_accept:
   - port: 80
+    proto: tcp
     source: null      # Allow from all sources
   - port: 22
+    proto: tcp
     source: limit     # Limit to 10 connections within 30 seconds
   - port: 25
+    proto: tcp
     source: 127.0.0.1 # Allow only from the given source
+  - port: 123
+    proto: udp
+    source: null
 ```
 
 #### dhcp
