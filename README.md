@@ -102,6 +102,10 @@ pacman_mirrors:
 
 #### ssh
 
+##### allow users
+
+Give a list of users which should be able to ssh to a host.
+
 ```yml
 ssh_allow_users:
   - root
