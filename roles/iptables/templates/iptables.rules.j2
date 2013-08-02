@@ -14,17 +14,19 @@
 -A INPUT -p tcp -j REJECT --reject-with tcp-rst
 -A INPUT -j REJECT --reject-with icmp-proto-unreachable
 
-{% for source, rules in iptables_accept_tcp|groupby('source') %}
+{% for source, rules in iptables_accept|groupby('source') %}
 {% if source is none %}
--A TCP -p tcp -m multiport --dports {{ rules|map(attribute='port')|join(",") }} -j ACCEPT
+{% for proto, normrules in rules|groupby('proto') %}
+-A {{ proto|upper }} -p {{ proto }} -m multiport --dports {{ normrules|map(attribute='port')|join(",") }} -j ACCEPT
+{% endfor %}
 {% elif source == 'limit' %}
 {% for rule in rules %}
--A TCP -p tcp --dport {{ rule.port }} -m recent --update --name limit-tcp-{{ rule.port}} --hitcount 10 --seconds 30 -j REJECT --reject-with icmp-port-unreachable
--A TCP -p tcp --dport {{ rule.port }} -m recent --set --name limit-tcp-{{ rule.port}} -j ACCEPT
+-A {{ rule.proto|upper }} -p {{ rule.proto }} --dport {{ rule.port }} -m recent --update --name limit-tcp-{{ rule.port}} --hitcount 10 --seconds 30 -j REJECT --reject-with icmp-port-unreachable
+-A {{ rule.proto|upper }} -p {{ rule.proto }} --dport {{ rule.port }} -m recent --set --name limit-tcp-{{ rule.port}} -j ACCEPT
 {% endfor %}
 {% else %}
 {% for rule in rules %}
--A TCP -p tcp --dport {{ rule.port }} -s {{ rule.source }} -j ACCEPT
+-A {{ rule.proto|upper }} -p {{ rule.proto }} --dport {{ rule.port }} -s {{ rule.source }} -j ACCEPT
 {% endfor %}
 {% endif %}
 {% endfor %}
