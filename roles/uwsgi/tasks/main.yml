@@ -33,3 +33,8 @@
            creates=/etc/systemd/system/sockets.target.wants/uwsgi@{{ item.name }}.socket
   with_items: uwsgi_services
   tags: uwsgi
+
+- name: start uwsgi service sockets
+  service: name=uwsgi@{{ item.name }}.socket state=started
+  with_items: uwsgi_services
+  tags: uwsgi
