@@ -16,5 +16,11 @@ auto-procname = true
 ; Disable request logging (access log of nginx suffices):
 disable-logging = true
 
-; Prefix all log statements with a date formatted in common log format:
-log-date = [%%d/%%b/%%Y:%%H:%%M:%%S %%z]
+; systemd logging
+logger = systemd
+
+; Plugin directory
+plugin_dir = /usr/lib/uwsgi
+
+; Plugins
+plugins = systemd_logger
