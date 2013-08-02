@@ -96,6 +96,15 @@ pam_limits_nofile: 50000
 
 ```yml
 uwsgi_user: http
+uwsgi_services:
+  - name: mysite
+    module: "mysite:app"
+    processes: 4
+  - name: myothersite
+    module: myothersite
+    django: true
+    idle: true
+    processes: 1
 ```
 
 #### nginx
