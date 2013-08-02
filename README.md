@@ -44,6 +44,10 @@ ansible_python_interpreter: /usr/bin/python2
 
 Your timezone as found in `/usr/share/zoneinfo`.
 
+##### locales
+
+A list of available locales. Set `default` to `true` for your default locale.
+
 ```yml
 systemd_timezone: Europe/Oslo
 systemd_locales:
