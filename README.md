@@ -212,6 +212,8 @@ nginx_worker_user: http
 
 ##### worker processes
 
+The number of worker processes nginx should spawn to service requests.
+
 ```yml
 nginx_worker_processes: 2
 ```
