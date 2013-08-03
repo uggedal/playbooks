@@ -174,6 +174,20 @@ uwsgi_user: http
 
 ##### services
 
+A list of uwsgi services to configure and start where:
+
+* `name`: a unique identifier
+* `module`: the WSGI module uwsgi should start
+* `processes`: number of workers uwsgi should start (defaults to 2)
+* `django`: should be set to `true` for Django projects
+* `chdir`: a directory to `chdir(3)` to before starting the app
+* `idle`: set to `true` to make uwsgi idle after 60 seconds of inactivity
+* `global`: set to `true` if you don't want to load the app from a virtualenv
+
+Note that a package with `name` will be installed for each uwsgi service
+item. If `global` is not set it's assumed that a virtualenv with the
+app installed is living under `/usr/local/venv`.
+
 ```yml
 uwsgi_services:
   - name: mysite
