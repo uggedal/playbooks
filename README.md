@@ -204,6 +204,8 @@ uwsgi_services:
 
 ##### worker user
 
+The uid nginx should run its worker processes under.
+
 ```yml
 nginx_worker_user: http
 ```
