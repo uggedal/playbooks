@@ -34,7 +34,7 @@ you can provide the following variables:
 ##### python interpreter
 
 Under Arch Linux `/usr/bin/python` is Python 3 so you'll need to tell
-ansible where Python 2 is located:
+ansible where Python 2 is located.
 
 ```yml
 ansible_python_interpreter: /usr/bin/python2
