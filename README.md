@@ -166,6 +166,8 @@ pam_limits_nofile: 50000
 
 ##### user
 
+The uid and gid uwsgi should drop privileges to.
+
 ```yml
 uwsgi_user: http
 ```
