@@ -164,8 +164,15 @@ pam_limits_nofile: 50000
 
 #### uwsgi
 
+##### user
+
 ```yml
 uwsgi_user: http
+```
+
+##### services
+
+```yml
 uwsgi_services:
   - name: mysite
     module: "mysite:app"
