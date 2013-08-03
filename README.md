@@ -220,6 +220,19 @@ nginx_worker_processes: 2
 
 ##### sites
 
+A list of nginx sites (virtual hosts) to configure where:
+
+* `fqdn`: the fully qualified domain name
+* `aliases`: a list of aliases for the `fqdn`
+* `default`: set to `true` if a site should be the default if nginx can't
+  match the host header of an incoming request to any other sites
+* `root`: the document root
+* `upstreams`: list of upstream servers
+* `uwsgi`: set to `true` if the `upstreams` are uwsgi sockets/servers
+* `static_prefix`: a path prefix where files will be served with far future
+  expires header
+* `autoindex`: use automatic directory listings when there are no index file
+
 ```yml
 nginx_sites:
   - fqdn: mysite.com
