@@ -117,11 +117,14 @@ ssh_allow_users:
 
 ##### accept
 
-A list of `port`, `proto` and `source` maps to accept connections
-for. `proto` can be `tcp` or `udp`. `source` can be `null` to allow
-connections from all sources, `limit` to limit per client to 10
-connections within 30 seconds and lastly an ip/netmask to restrict
-where connections can come from.
+A list of rules to accept connections for where:
+
+* `port` is self-explanatory
+* `proto` can be `udp` or `tcp`
+* `source` can be:
+    - `null` to allow connections from all sources
+    - `limit` to limit per client to 10 connections within 30 seconds
+    - an ip/netmask to restrict where connections can come from
 
 ```yml
 iptables_accept:
