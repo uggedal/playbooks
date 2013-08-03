@@ -16,7 +16,7 @@ ansible-playbook -i ../private-inventory/hosts site.yml
 
 ### Groups
 
-The `servers` and `laptops` groups are used to differente behavior
+The `servers` and `laptops` groups are used to differentiate behavior
 within some roles:
 
 #### ntp
