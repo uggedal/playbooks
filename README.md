@@ -202,9 +202,21 @@ uwsgi_services:
 
 #### nginx
 
+##### worker user
+
 ```yml
 nginx_worker_user: http
+```
+
+##### worker processes
+
+```yml
 nginx_worker_processes: 2
+```
+
+##### sites
+
+```yml
 nginx_sites:
   - fqdn: mysite.com
     aliases:
