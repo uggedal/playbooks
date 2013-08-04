@@ -1,0 +1,5 @@
+---
+
+- name: install redis
+  pacman: name=redis state=installed
+  tags: redis
