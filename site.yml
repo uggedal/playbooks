@@ -30,3 +30,9 @@
   gather_facts: no
   roles:
   - nginx
+
+- hosts: redisservers
+  user: root
+  gather_facts: no
+  roles:
+  - redis
