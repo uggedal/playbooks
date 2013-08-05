@@ -245,6 +245,24 @@ nginx_sites:
     static_prefix: /static
 ```
 
+#### redis
+
+##### bind
+
+The interface redis should bind to.
+
+```yml
+redis_bind: 127.0.0.1
+```
+
+##### port
+
+The port redis should listen on.
+
+```yml
+redis_port: 6379
+```
+
 License
 -------
 
