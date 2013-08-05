@@ -3,3 +3,7 @@
 - name: install redis
   pacman: name=redis state=installed
   tags: redis
+
+- name: configure redis
+  template: src=redis.conf.j2 dest=/etc/redis.conf
+  tags: redis
