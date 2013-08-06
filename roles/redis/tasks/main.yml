@@ -12,3 +12,7 @@
   copy: src=sysctl.conf dest=/etc/sysctl.d/redis.conf
   notify: realize redis sysctl config
   tags: redis
+
+- name: start and enable redis
+  service: name=redis state=started enabled=yes
+  tags: redis
