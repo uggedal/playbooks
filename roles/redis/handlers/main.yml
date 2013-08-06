@@ -1,0 +1,4 @@
+---
+
+- name: realize redis sysctl config
+  command: /usr/bin/sysctl -q -p/etc/sysctl.d/redis.conf

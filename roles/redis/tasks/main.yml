@@ -7,3 +7,8 @@
 - name: configure redis
   template: src=redis.conf.j2 dest=/etc/redis.conf
   tags: redis
+
+- name: configure overcommit of memory for redis
+  copy: src=sysctl.conf dest=/etc/sysctl.d/redis.conf
+  notify: realize redis sysctl config
+  tags: redis
