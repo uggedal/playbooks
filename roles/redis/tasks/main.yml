@@ -6,6 +6,7 @@
 
 - name: configure redis
   template: src=redis.conf.j2 dest=/etc/redis.conf
+  notify: restart redis
   tags: redis
 
 - name: configure overcommit of memory for redis
