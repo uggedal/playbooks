@@ -1,0 +1,5 @@
+---
+
+- name: install postgresql
+  pacman: name=postgresql state=installed
+  tags: postgresql
