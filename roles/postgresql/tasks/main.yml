@@ -21,3 +21,7 @@
 - name: start and enable postgresql
   service: name=postgresql state=started enabled=yes
   tags: postgresql
+
+- name: install python postgresql bindings for ansible
+  pacman: name=python2-psycopg2 state=installed
+  tags: postgresql
