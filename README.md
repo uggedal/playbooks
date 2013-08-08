@@ -305,6 +305,17 @@ The timezone to use for Date/Time types and logging.
 postgresql_timezone: 'Europe/Oslo'
 ```
 
+##### databases
+
+List of databases and matching owners to create.
+
+```yml
+postgresql_databases:
+  - myapp
+  - yourapp
+```
+
+
 License
 -------
 
