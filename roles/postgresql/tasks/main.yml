@@ -30,3 +30,8 @@
   postgresql_user: name={{ item }} state=present password='' role_attr_flags=NOCREATEDB,NOSUPERUSER,NOCREATEROLE
   with_items: postgresql_databases
   tags: postgresql
+
+- name: create postgresql databases
+  postgresql_db: name={{ item }} state=present owner={{ item }}
+  with_items: postgresql_databases
+  tags: postgresql
