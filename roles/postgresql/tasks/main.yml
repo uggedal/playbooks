@@ -7,3 +7,8 @@
 - name: create postgresql data directory
   file: name=/var/lib/postgres/data state=directory owner=postgres group=postgres
   tags: postgresql
+
+- name: initialize postgresql data directory
+  command: /usr/bin/su - postgres -c 'initdb --locale en_US.UTF-8 -D /var/lib/postgres/data'
+           creates=/var/lib/postgres/data/PG_VERSION
+  tags: postgresql
