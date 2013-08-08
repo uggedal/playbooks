@@ -12,3 +12,8 @@
   command: /usr/bin/su - postgres -c 'initdb --locale en_US.UTF-8 -D /var/lib/postgres/data'
            creates=/var/lib/postgres/data/PG_VERSION
   tags: postgresql
+
+- name: configure postgresql
+  template: src=postgresql.conf.j2 dest=/var/lib/postgres/data/postgresql.conf
+  notify: restart postgresql
+  tags: postgresql
