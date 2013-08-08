@@ -3,3 +3,7 @@
 - name: install postgresql
   pacman: name=postgresql state=installed
   tags: postgresql
+
+- name: create postgresql data directory
+  file: name=/var/lib/postgres/data state=directory owner=postgres group=postgres
+  tags: postgresql
