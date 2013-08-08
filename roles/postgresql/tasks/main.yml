@@ -17,3 +17,7 @@
   template: src=postgresql.conf.j2 dest=/var/lib/postgres/data/postgresql.conf
   notify: restart postgresql
   tags: postgresql
+
+- name: start and enable postgresql
+  service: name=postgresql state=started enabled=yes
+  tags: postgresql
