@@ -263,6 +263,48 @@ The port redis should listen on.
 redis_port: 6379
 ```
 
+#### postgresql
+
+##### listen addresses
+
+The interface(s) postgresql should bind to.
+
+```yml
+postgresql_listen_addresses: 127.0.0.1
+```
+
+##### max connections
+
+The maximum number of concurrent connection to postgresql.
+
+```yml
+postgresql_max_connections: 100
+```
+
+##### shared buffers
+
+The amount of memory postgresql should use for shared memory buffers.
+
+```yml
+postgresql_shared_buffers: 24MB
+```
+
+##### effective cache size
+
+The amount of memory you expect will be available for disk caching.
+
+```yml
+postgresql_effective_cache_size: 128MB
+```
+
+##### timezone
+
+The timezone to use for Date/Time types and logging.
+
+```yml
+postgresql_timezone: 'Europe/Oslo'
+```
+
 License
 -------
 
