@@ -16,6 +16,15 @@ ansible-playbook -i ../private-inventory/hosts site.yml
 
 ### Groups
 
+The following groups are available:
+
+* servers
+* wsgiservers
+* httpservers
+* redisservers
+* postgresqlservers
+* laptops
+
 The `servers` and `laptops` groups are used to differentiate behavior
 within some roles:
 
