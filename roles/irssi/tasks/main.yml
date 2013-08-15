@@ -1,0 +1,5 @@
+---
+
+- name: install irssi
+  pacman: name=irssi state=installed
+  tags: irssi
