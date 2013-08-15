@@ -42,3 +42,9 @@
   gather_facts: no
   roles:
   - postgresql
+
+- hosts: ircclients
+  user: root
+  gather_facts: no
+  roles:
+  - irssi
