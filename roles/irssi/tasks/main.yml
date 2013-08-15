@@ -1,5 +1,8 @@
 ---
 
 - name: install irssi
-  pacman: name=irssi state=installed
+  pacman: name={{ item }} state=installed
+  with_items:
+    - irssi
+    - irssi-script-trackbar
   tags: irssi
