@@ -1,0 +1,6 @@
+#!/bin/sh
+
+USER=root
+INVENTORY='../inventory/hosts site.yml'
+
+ansible-playbook -u $USER -i $INVENTORY "$@"

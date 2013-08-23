@@ -1,7 +1,6 @@
 ---
 
 - hosts: all
-  user: root
   gather_facts: no
   roles:
   - systemd
@@ -12,44 +11,37 @@
   - logrotate
 
 - hosts: servers
-  user: root
   gather_facts: no
   roles:
   - dhcp
   - pam
 
 - hosts: wsgiservers
-  user: root
   gather_facts: no
   roles:
   - uwsgi
 
 - hosts: httpservers
-  user: root
   gather_facts: no
   roles:
   - nginx
 
 - hosts: redisservers
-  user: root
   gather_facts: no
   roles:
   - redis
 
 - hosts: postgresqlservers
-  user: root
   gather_facts: no
   roles:
   - postgresql
 
 - hosts: ircclients
-  user: root
   gather_facts: no
   roles:
   - irssi
 
 - hosts: laptops
-  user: root
   gather_facts: no
   roles:
   - desktop
