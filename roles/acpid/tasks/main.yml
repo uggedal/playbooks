@@ -1,5 +1,8 @@
 ---
 
-- name: install acpid
-  pacman: name=acpid state=installed
+- name: install acpid and dependencies
+  pacman: name={{ item }} state=installed
+  with_items:
+    - acpid
+    - xorg-xset
   tags: acpid
