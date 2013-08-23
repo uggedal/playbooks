@@ -1,0 +1,37 @@
+---
+
+- name: install desktop
+  pacman: name={{ item }} state=installed
+  with_items:
+    - xorg-server
+    - xorg-xrdb
+    - xorg-xinit
+    - xorg-xrandr
+    - xorg-xsetroot
+    - xf86-input-mtrack-git
+    - xf86-video-ati
+    - xf86-video-intel
+    - terminus-font
+    - ttf-dejavu
+    - ttf-gentium
+    - ttf-ms-win8
+    - alsa-utils
+    - unclutter
+    - autocutsel
+    - i3-wm
+    - i3status
+    - dmenu-xft
+    - rxvt-unicode
+    - firefox
+    - mplayer-vaapi
+    - libva-intel-driver
+    - youtube-dl
+    - sxiv
+    - mupdf
+    - rtorrent
+    - p7zip
+    - unrar
+    - bc
+    - openconnect
+  tags:
+    - desktop
