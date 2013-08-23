@@ -41,7 +41,13 @@
   roles:
   - irssi
 
+- hosts: developmentenvironments
+  gather_facts: no
+  roles:
+  - development
+
 - hosts: laptops
   gather_facts: no
   roles:
   - desktop
+  - acpid
