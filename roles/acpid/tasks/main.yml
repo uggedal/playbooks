@@ -13,3 +13,4 @@
 
 - name: start and enable acpid
   service: name=acpid state=started enabled=yes
+  tags: acpid
