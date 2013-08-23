@@ -25,6 +25,7 @@
     - firefox
     - mplayer-vaapi
     - libva-intel-driver
+    - spotify
     - youtube-dl
     - sxiv
     - mupdf
