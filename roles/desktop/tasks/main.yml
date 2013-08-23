@@ -35,5 +35,4 @@
     - keychain
     - bc
     - openconnect
-  tags:
-    - desktop
+  tags: desktop
