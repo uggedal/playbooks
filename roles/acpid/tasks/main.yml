@@ -1,0 +1,5 @@
+---
+
+- name: install acpid
+  pacman: name=acpid state=installed
+  tags: acpid
