@@ -1,0 +1,10 @@
+---
+
+- name: install development environment
+  pacman: name={{ item }} state=installed
+  with_items:
+    - bash-completion
+    - vim
+    - git
+  tags:
+    - development
