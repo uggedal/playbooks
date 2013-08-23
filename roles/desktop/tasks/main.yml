@@ -32,6 +32,7 @@
     - rtorrent
     - p7zip
     - unrar
+    - keychain
     - bc
     - openconnect
   tags:
