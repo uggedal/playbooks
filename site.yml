@@ -47,3 +47,9 @@
   gather_facts: no
   roles:
   - irssi
+
+- hosts: laptops
+  user: root
+  gather_facts: no
+  roles:
+  - desktop
