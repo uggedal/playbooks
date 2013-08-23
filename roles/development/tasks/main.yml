@@ -6,5 +6,4 @@
     - bash-completion
     - vim
     - git
-  tags:
-    - development
+  tags: - development
