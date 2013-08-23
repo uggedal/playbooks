@@ -6,3 +6,7 @@
     - acpid
     - xorg-xset
   tags: acpid
+
+- name: configure acpid
+  copy: src=handler.sh dest=/etc/acpi/handler.sh mode=755
+  tags: acpid
