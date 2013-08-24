@@ -59,8 +59,9 @@ MacBook Pro 8,2
 ---------------
 
 1. Create a bootable USB disk:
-   ```sh
-    curl -LO https://github.com/uggedal/playbooks/raw/master/bootstrap/mbp82-usb.sh
-    vi mbp82-usb.sh
-    sh mbp82-usb.sh
-   ```
+
+    ```sh
+     curl -LO https://github.com/uggedal/playbooks/raw/master/bootstrap/mbp82-usb.sh
+     vi mbp82-usb.sh
+     sh mbp82-usb.sh
+    ```
