@@ -11,9 +11,9 @@ Linode
 2. SSH into it and execute the following:
 
     ```sh
-     curl -LO https://github.com/uggedal/playbooks/raw/master/bootstrap/linode.sh
-     vi linode.sh
-     sh linode.sh
+    curl -LO https://github.com/uggedal/playbooks/raw/master/bootstrap/linode.sh
+    vi linode.sh
+    sh linode.sh
     ```
 3. Edit the configuration profile and change the kernel to `pv-grub-x86_64`.
 4. Reboot.
@@ -29,7 +29,7 @@ MacBook Pro 8,2
 1. Create a bootable USB disk:
 
     ```sh
-     curl -LO https://github.com/uggedal/playbooks/raw/master/bootstrap/mbp82-usb.sh
-     vi mbp82-usb.sh
-     sh mbp82-usb.sh
+    curl -LO https://github.com/uggedal/playbooks/raw/master/bootstrap/mbp82-usb.sh
+    vi mbp82-usb.sh
+    sh mbp82-usb.sh
     ```
