@@ -21,6 +21,7 @@ EOF
 
 mkdir -p /mnt/{usb,iso}
 mount -o loop /tmp/$ISO /mnt/iso
+# Extract label of Arch ISO and create a FAT32 fs on the USB using it
 awk 'BEGIN {FS="="} /archisolabel/ {print $3}' \
   /mnt/iso/loader/entries/archiso-x86_64.conf \
   | xargs mkfs.vfat -F32 $USBDEV1 -n
