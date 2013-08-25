@@ -3,3 +3,7 @@
 - name: install broadcom-wl
   pacman: name=broadcom-wl-dkms state=installed
   tags: broadcom-wl
+
+- name: start and enable dkms
+  service: name=dkms state=started enabled=yes
+  tags: broadcom-wl
