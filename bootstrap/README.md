@@ -47,3 +47,8 @@ MacBook Pro 8,2
     passwd
     ```
 4. Reboot.
+5. Copy your ssh public key to the machine:
+
+    ```sh
+    ssh-copy-id root@yourhost
+    ```
