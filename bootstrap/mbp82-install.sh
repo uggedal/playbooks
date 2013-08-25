@@ -78,6 +78,8 @@ sed -i 's/#\(GRUB_DISABLE_LINUX_UUID=true\)/\1/' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot --bootloader-id=grub || true
 
+ln -s /usr/lib/systemd/system/sshd.socket /etc/systemd/system/sockets.target.wants/sshd.socket
+
 useradd -m -g users -s /bin/bash $USERNAME
 passwd -d $USERNAME
 ENDCHROOT
