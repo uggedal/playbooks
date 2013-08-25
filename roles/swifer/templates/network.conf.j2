@@ -1,0 +1,12 @@
+network={
+    ssid="{{ item.ssid }}"
+{% if 'psk' in item %}
+    psk="{{ item.psk }}"
+{% elif 'eap' in item %}
+    eap={{ item.eap }}
+    anonymous_identity="{{ item.identity }}"
+    identity="{{ item.identity }}"
+    password="{{ item.password }}"
+{% endif %}
+    key_mgmt={{ item.get('key_mgmt', 'NONE') }}
+}

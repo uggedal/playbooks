@@ -7,3 +7,8 @@
 - name: configure swifer
   template: src=swifer.conf.j2 dest=/etc/swifer.conf
   tags: swifer
+
+- name: configure swifer networks
+  template: src=network.conf.j2 dest=/usr/share/swifer/{{ item.ssid }} mode=600
+  with_items: swifer_networks
+  tags: swifer
