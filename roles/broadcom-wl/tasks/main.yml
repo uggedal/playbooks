@@ -1,0 +1,5 @@
+---
+
+- name: install broadcom-wl
+  pacman: name=broadcom-wl-dkms state=installed
+  tags: broadcom-wl
