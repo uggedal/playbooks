@@ -334,6 +334,30 @@ The wireless interface swifer should operate on.
 swifer_interface: wlan0
 ```
 
+##### networks
+
+List of networks to configure for swifer where:
+
+* `ssid`: the SSID
+* `key_mgmt`: the key management scheme
+* `psk`: the pre-shared key
+* `eap`: the extensible authentication protocol metod
+* `identity`: identity to use with `eap`
+* `password`: password to use with `eap`
+
+```yml
+swifer_networks:
+  - ssid: open_ap
+  - ssid: home_ap
+    key_mgmt: WPA-PSK
+    psk: supersecret
+  - ssid: corp_ap
+    key_mgmt: WPA-EAP
+    eap: PEAP
+    identity: 'My Name'
+    password: mypassword
+```
+
 License
 -------
 
