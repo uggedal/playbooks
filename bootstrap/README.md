@@ -33,3 +33,4 @@ MacBook Pro 8,2
     vi mbp82-usb.sh
     sh mbp82-usb.sh
     ```
+2. Boot while holding down Option/Alt and select the USB disk.
