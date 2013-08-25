@@ -324,6 +324,15 @@ postgresql_databases:
   - yourapp
 ```
 
+#### swifer
+
+##### interface
+
+The wireless interface swifer should operate on.
+
+```yml
+swifer_interface: wlan0
+```
 
 License
 -------
