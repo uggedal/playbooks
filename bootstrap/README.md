@@ -46,3 +46,4 @@ MacBook Pro 8,2
     ```sh
     passwd
     ```
+4. Reboot.
