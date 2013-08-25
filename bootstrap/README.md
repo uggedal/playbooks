@@ -41,3 +41,8 @@ MacBook Pro 8,2
     vi mbp82-install.sh
     sh mbp82-install.sh
     ```
+4. Set a root password:
+
+    ```sh
+    passwd
+    ```
