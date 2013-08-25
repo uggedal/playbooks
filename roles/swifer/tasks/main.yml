@@ -3,3 +3,7 @@
 - name: install swifer
   pacman: name=swifer-git state=installed
   tags: swifer
+
+- name: configure swifer
+  template: src=swifer.conf.j2 dest=/etc/swifer.conf
+  tags: swifer

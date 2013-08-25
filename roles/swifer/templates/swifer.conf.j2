@@ -1,0 +1,4 @@
+INTERFACE = {{ swifer_interface }}
+
+[NETWORKS]
+{{ swifer_networks|map(attribute='ssid')|join("\n") }}
