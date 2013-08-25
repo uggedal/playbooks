@@ -34,3 +34,10 @@ MacBook Pro 8,2
     sh mbp82-usb.sh
     ```
 2. Boot while holding down Option/Alt and select the USB disk.
+3. Install the base system and type a password for encrypting the root device:
+
+    ```sh
+    curl -LO https://github.com/uggedal/playbooks/raw/master/bootstrap/mbp82-install.sh
+    vi mbp82-install.sh
+    sh mbp82-install.sh
+    ```
