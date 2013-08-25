@@ -15,6 +15,7 @@ Linode
     vi linode.sh
     sh linode.sh
     ```
+
 3. Edit the configuration profile and change the kernel to `pv-grub-x86_64`.
 4. Reboot.
 5. Copy your ssh public key to the new VM:
@@ -33,6 +34,7 @@ MacBook Pro 8,2
     vi mbp82-usb.sh
     sh mbp82-usb.sh
     ```
+
 2. Boot while holding down Option/Alt and select the USB disk.
 3. Install the base system and type a password for encrypting the root device:
 
@@ -41,11 +43,13 @@ MacBook Pro 8,2
     vi mbp82-install.sh
     sh mbp82-install.sh
     ```
+
 4. Set a root password:
 
     ```sh
     passwd
     ```
+
 4. Reboot.
 5. Copy your ssh public key to the machine:
 
