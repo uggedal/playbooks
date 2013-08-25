@@ -12,3 +12,7 @@
   template: src=network.conf.j2 dest=/usr/share/swifer/{{ item.ssid }} mode=600
   with_items: swifer_networks
   tags: swifer
+
+- name: start and enable swifer
+  service: name=swifer state=started enabled=yes
+  tags: swifer
