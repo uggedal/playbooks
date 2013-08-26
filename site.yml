@@ -36,6 +36,11 @@
   roles:
   - postgresql
 
+- hosts: qemuservers
+  gather_facts: no
+  roles:
+  - qemu
+
 - hosts: ircclients
   gather_facts: no
   roles:
