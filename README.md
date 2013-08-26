@@ -358,6 +358,23 @@ swifer_networks:
     password: mypassword
 ```
 
+#### users
+
+List of users to create where the following fields are required:
+
+* `name`: username
+* `group`: login group
+* `shell`: login shell
+* `authorized_key`: ssh authorized key
+
+```sh
+users:
+  - name: me
+    group: users
+    shell: /bin/bash
+    authorized_key: "ssh-rsa AABBCC...== me@mydomain.tld"
+```
+
 License
 -------
 
