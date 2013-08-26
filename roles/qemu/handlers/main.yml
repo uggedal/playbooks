@@ -1,0 +1,4 @@
+---
+
+- name: load kvm module into kernel
+  command: /usr/bin/modprobe kvm_intel
