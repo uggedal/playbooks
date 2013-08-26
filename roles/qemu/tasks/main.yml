@@ -1,0 +1,5 @@
+---
+
+- name: install qemu
+  pacman: name=qemu state=installed
+  tags: qemu
