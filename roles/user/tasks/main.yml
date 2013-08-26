@@ -4,3 +4,8 @@
   user: name={{ item.name }} group={{ item.group }} shell={{ item.shell }}
   with_items: users
   tags: user
+
+- name: add authorized keys for users
+  authorized_key: user={{ item.name }} key="{{ item.authorized_key }}"
+  with_items: users
+  tags: user
