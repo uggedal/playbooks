@@ -69,7 +69,13 @@ MacBook Pro 8,2
     ./play
     ```
 
-7. Copy over ssh keys:
+7. Delete password of normal user:
+
+    ```sh
+    passwd -d <user>
+    ```
+
+8. Copy over ssh keys:
 
     ```sh
     mkdir ~/.ssh
@@ -78,7 +84,7 @@ MacBook Pro 8,2
     chmod 600 ~/.ssh/*
     ```
 
-8. Init dotfiles:
+9. Init dotfiles:
 
     ```sh
     rm ~/.bash* ~/.x*

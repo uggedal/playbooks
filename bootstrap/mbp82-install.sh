@@ -16,8 +16,6 @@ TIMEZONE=Europe/Oslo
 CUSTOM_MIRROR_NAME=mymrepo
 CUSTOM_MIRROR_URL=http://myrepo.myhost.tld
 
-USERNAME=myuser
-
 # Disk setup
 
 sgdisk -Z $HD
@@ -79,9 +77,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot --bootloader-id=grub || true
 
 ln -s /usr/lib/systemd/system/sshd.socket /etc/systemd/system/sockets.target.wants/sshd.socket
-
-useradd -m -g users -s /bin/bash $USERNAME
-passwd -d $USERNAME
 ENDCHROOT
 
 umount /mnt/{boot,home,/sys{/firmware/efi/efivars,}}
