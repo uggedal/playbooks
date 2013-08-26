@@ -68,3 +68,12 @@ MacBook Pro 8,2
     ```sh
     ./play
     ```
+
+7. Copy over ssh keys:
+
+    ```sh
+    mkdir ~/.ssh
+    cp /somewhere/id_rsa* ~/.ssh
+    chmod 700 ~/.ssh
+    chmod 600 ~/.ssh/*
+    ```
