@@ -9,6 +9,7 @@
   - iptables
   - ntp
   - logrotate
+  - user
 
 - hosts: servers
   gather_facts: no
