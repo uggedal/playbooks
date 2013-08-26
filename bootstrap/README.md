@@ -62,3 +62,9 @@ MacBook Pro 8,2
     ```sh
     ssh-copy-id root@yourhost
     ```
+
+6. Provision the host with ansible:
+
+    ```sh
+    ./play
+    ```
