@@ -24,6 +24,12 @@ Linode
     ssh-copy-id root@yourhost
     ```
 
+6. Provision the host with ansible:
+
+    ```sh
+    ./play
+    ```
+
 MacBook Pro 8,2
 ---------------
 
