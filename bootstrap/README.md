@@ -77,3 +77,12 @@ MacBook Pro 8,2
     chmod 700 ~/.ssh
     chmod 600 ~/.ssh/*
     ```
+
+8. Init dotfiles:
+
+    ```sh
+    rm ~/.bash* ~/.x*
+    git init
+    git remote add -t \* -f origin git@github.com:uggedal/dotfiles.git
+    git checkout master
+    ```
