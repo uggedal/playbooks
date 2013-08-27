@@ -5,6 +5,7 @@
   with_items:
     - bash-completion
     - vim
+    - tmux
     - git
     - mercurial
     - tig
