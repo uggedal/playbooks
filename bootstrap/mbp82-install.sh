@@ -70,7 +70,6 @@ pacstrap /mnt \
   logrotate \
   man-db \
   man-pages \
-  netctl \
   openssh \
   pacman \
   pciutils \
