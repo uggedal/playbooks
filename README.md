@@ -364,6 +364,7 @@ List of users to create where the following fields are required:
 
 * `name`: username
 * `group`: login group
+* `groups`: comma separated list of supplementary groups
 * `shell`: login shell
 * `authorized_key`: ssh authorized key
 
