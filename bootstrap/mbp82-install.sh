@@ -39,12 +39,52 @@ mkdir /mnt/boot
 mount $BOOTDEV /mnt/boot
 
 echo "Server = $MIRROR/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
-pacstrap /mnt bash btrfs-progs bzip2 coreutils cronie cryptsetup \
-  device-mapper dhcpcd diffutils file filesystem findutils gawk gcc-libs \
-  gettext glibc grep grub gummiboot gzip inetutils iproute2 iputils less \
-  licenses linux logrotate man-db man-pages netctl openssh pacman pciutils \
-  perl procps-ng psmisc sed shadow sysfsutils tar texinfo usbutils util-linux
-  vi which
+pacstrap /mnt \
+  bash \
+  btrfs-progs \
+  bzip2 \
+  coreutils \
+  cronie \
+  cryptsetup \
+  device-mapper \
+  dhcpcd \
+  diffutils \
+  file \
+  filesystem \
+  findutils \
+  gawk \
+  gcc-libs \
+  gettext \
+  glibc \
+  grep \
+  grub \
+  gummiboot \
+  gzip \
+  inetutils \
+  iproute2 \
+  iputils \
+  less \
+  licenses \
+  linux \
+  logrotate \
+  man-db \
+  man-pages \
+  netctl \
+  openssh \
+  pacman \
+  pciutils \
+  perl \
+  procps-ng \
+  psmisc \
+  sed \
+  shadow \
+  sysfsutils \
+  tar \
+  texinfo \
+  usbutils \
+  util-linux \
+  vi \
+  which
 
 genfstab -p /mnt >> /mnt/etc/fstab
 
