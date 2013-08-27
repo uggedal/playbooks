@@ -1,0 +1,5 @@
+---
+
+- name: install ansible
+  pacman: name=ansible state=installed
+  tags: ansible
