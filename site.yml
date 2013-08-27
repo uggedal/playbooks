@@ -68,3 +68,4 @@
   gather_facts: no
   roles:
   - broadcom-wl
+  - gmux
