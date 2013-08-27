@@ -7,5 +7,6 @@
     - vim
     - git
     - tig
+    - hub
     - bc
   tags: development
