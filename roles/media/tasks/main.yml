@@ -7,7 +7,7 @@
     - mplayer-vaapi
     - libva-intel-driver
     - spotify
-    - youtube-dl
+    - python2-youtube-dl
     - sxiv
     - mupdf
     - rtorrent
