@@ -42,6 +42,11 @@
   roles:
   - qemu
 
+- hosts: ansibleclients
+  gather_facts: no
+  roles:
+  - ansible
+
 - hosts: ircclients
   gather_facts: no
   roles:
