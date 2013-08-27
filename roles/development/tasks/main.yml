@@ -66,3 +66,6 @@
     - pkg-config
   tags: development
 
+- name: configure packaging environment
+  template: src=makepkg.conf.j2 dest=/etc/makepkg.conf
+  tags: development
