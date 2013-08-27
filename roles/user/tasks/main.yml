@@ -1,7 +1,8 @@
 ---
 
 - name: create users
-  user: name={{ item.name }} group={{ item.group }} shell={{ item.shell }}
+  user: name={{ item.name }} group={{ item.group }} groups={{ item.groups }}
+        shell={{ item.shell }}
   with_items: users
   tags: user
 
