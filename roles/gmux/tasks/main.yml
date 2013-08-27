@@ -1,0 +1,5 @@
+---
+
+- name: set default gmux value
+  copy: src=gmux.conf dest=/etc/tmpfiles.d/gmux.conf
+  tags: gmux
