@@ -11,5 +11,6 @@
     - the_silver_searcher
     - inotify-tools
     - cloc
+    - gettext
     - bc
   tags: development
