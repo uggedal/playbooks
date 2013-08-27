@@ -1,5 +1,5 @@
 ---
 
-- name: set default gmux value
+- name: set default gmux brightness
   copy: src=gmux.conf dest=/etc/tmpfiles.d/gmux.conf
   tags: gmux
