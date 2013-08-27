@@ -48,3 +48,21 @@
 - name: install go development environment
   pacman: name=go state=installed
   tags: development
+
+- name: install packaging environment
+  pacman: name={{ item }} state=installed
+  with_items:
+    - autoconf
+    - automake
+    - binutils
+    - bison
+    - fakeroot
+    - flex
+    - gcc
+    - libtool
+    - m4
+    - make
+    - patch
+    - pkg-config
+  tags: development
+
