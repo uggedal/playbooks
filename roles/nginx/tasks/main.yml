@@ -22,8 +22,13 @@
   file: name=/etc/nginx/conf.d state=directory
   tags: nginx
 
-- name: create http root
+- name: create base http root
   file: name=/srv/http state=directory owner=root group=http mode=750
+  tags: nginx
+
+- name: create http root for sites
+  file: name={{ item.root }} state=directory owner=root group=http mode=750
+  with_items: nginx_sites
   tags: nginx
 
 - name: configure nginx sites
