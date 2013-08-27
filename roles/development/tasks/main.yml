@@ -37,3 +37,10 @@
     - python
     - virtualenv
   tags: development
+
+- name: install js development environment
+  pacman: name={{ item }} state=installed
+  with_items:
+    - nodejs
+    - n
+  tags: development
