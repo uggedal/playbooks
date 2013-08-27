@@ -16,6 +16,18 @@
     - bc
   tags: development
 
+- name: install analysis applications 
+  pacman: name={{ item }} state=installed
+  with_items:
+    - htop
+    - lsof
+    - psm
+    - sysstat
+    - iotop
+    - perf
+    - wrk
+  tags: development
+
 - name: install c development environment
   pacman: name={{ item }} state=installed
   with_items:
