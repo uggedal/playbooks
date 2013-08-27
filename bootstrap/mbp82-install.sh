@@ -49,6 +49,7 @@ pacstrap /mnt \
   device-mapper \
   dhcpcd \
   diffutils \
+  dosfstools \
   file \
   filesystem \
   findutils \
