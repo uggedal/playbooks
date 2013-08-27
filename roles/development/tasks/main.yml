@@ -1,6 +1,6 @@
 ---
 
-- name: install development environment
+- name: install base development environment
   pacman: name={{ item }} state=installed
   with_items:
     - bash-completion
@@ -14,4 +14,11 @@
     - cloc
     - gettext
     - bc
+  tags: development
+
+- name: install c development environment
+  pacman: name={{ item }} state=installed
+  with_items:
+    - valgrind
+    - gdb
   tags: development
