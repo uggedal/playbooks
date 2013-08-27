@@ -55,9 +55,14 @@
 - hosts: laptops
   gather_facts: no
   roles:
-  - desktop
   - acpid
   - swifer
+  - x
+  - font
+  - vm
+  - xdevelopment
+  - web
+  - media
 
 - hosts: mbp82s
   gather_facts: no

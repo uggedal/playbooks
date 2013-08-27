@@ -1,0 +1,14 @@
+---
+
+- name: install x
+  pacman: name={{ item }} state=installed
+  with_items:
+    - xorg-server
+    - xorg-xrdb
+    - xorg-xinit
+    - xorg-xrandr
+    - xorg-xsetroot
+    - xf86-input-mtrack-git
+    - xf86-video-ati
+    - xf86-video-intel
+  tags: x

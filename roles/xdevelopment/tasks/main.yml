@@ -1,0 +1,8 @@
+---
+
+- name: install x development applications
+  pacman: name={{ item }} state=installed
+  with_items:
+    - rxvt-unicode
+    - keychain
+  tags: xdevelopment

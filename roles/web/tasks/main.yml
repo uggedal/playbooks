@@ -1,0 +1,8 @@
+---
+
+- name: install web applications
+  pacman: name={{ item }} state=installed
+  with_items:
+    - firefox
+    - openconnect
+  tags: web

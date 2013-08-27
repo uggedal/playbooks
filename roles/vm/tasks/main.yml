@@ -1,0 +1,11 @@
+---
+
+- name: install vm
+  pacman: name={{ item }} state=installed
+  with_items:
+    - unclutter
+    - autocutsel
+    - i3-wm
+    - i3status
+    - dmenu-xft
+  tags: vm
