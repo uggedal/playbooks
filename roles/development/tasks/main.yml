@@ -44,3 +44,7 @@
     - nodejs
     - n
   tags: development
+
+- name: install go development environment
+  pacman: name=go state=installed
+  tags: development
