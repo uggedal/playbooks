@@ -9,5 +9,6 @@
     - tig
     - hub
     - the_silver_searcher
+    - inotify-tools
     - bc
   tags: development
