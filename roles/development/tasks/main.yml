@@ -10,5 +10,6 @@
     - hub
     - the_silver_searcher
     - inotify-tools
+    - cloc
     - bc
   tags: development
