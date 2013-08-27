@@ -8,5 +8,6 @@
     - git
     - tig
     - hub
+    - the_silver_searcher
     - bc
   tags: development
