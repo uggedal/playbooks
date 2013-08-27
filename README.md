@@ -372,6 +372,7 @@ List of users to create where the following fields are required:
 users:
   - name: me
     group: users
+    groups: adm
     shell: /bin/bash
     authorized_key: "ssh-rsa AABBCC...== me@mydomain.tld"
 ```
