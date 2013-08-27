@@ -22,3 +22,18 @@
     - valgrind
     - gdb
   tags: development
+
+- name: install python development environment
+  pacman: name={{ item }} state=installed
+  with_items:
+    - python2
+    - python2-virtualenv
+    - python2-pyflakes
+  tags: development
+
+- name: make python2 default python
+  file: src=/usr/bin/{{ item }}2 dest=/usr/bin/{{ item }} state=link
+  with_items:
+    - python
+    - virtualenv
+  tags: development
