@@ -6,6 +6,7 @@
     - bash-completion
     - vim
     - git
+    - mercurial
     - tig
     - hub
     - the_silver_searcher
