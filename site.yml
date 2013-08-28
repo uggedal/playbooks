@@ -47,6 +47,11 @@
   roles:
   - ansible
 
+- hosts: tarsnapclients
+  gather_facts: no
+  roles:
+  - tarsnap
+
 - hosts: ircclients
   gather_facts: no
   roles:
