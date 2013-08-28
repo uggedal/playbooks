@@ -3,3 +3,7 @@
 - name: install tarsnap
   pacman: name=tarsnap state=installed
   tags: tarsnap
+
+- name: configure tarsnap
+  template: src=tarsnap.conf.j2 dest=/etc/tarsnap/tarsnap.conf
+  tags: tarsnap
