@@ -3,3 +3,7 @@
 - name: install snapback
   pacman: name=snapback state=installed
   tags: snapback
+
+- name: configure snapback
+  template: src=snapback.conf.j2 dest=/etc/snapback.conf
+  tags: snapback

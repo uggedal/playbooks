@@ -1,0 +1,11 @@
+CMDS=(
+{% for cmd in snapback_cmds %}
+  "{{ cmd }}"
+{% endfor %}
+)
+
+PATHS=(
+{% for path in snapback_paths %}
+  "{{ path }}"
+{% endfor %}
+)
