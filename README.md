@@ -368,7 +368,7 @@ List of users to create where the following fields are required:
 * `shell`: login shell
 * `authorized_key`: ssh authorized key
 
-```sh
+```yml
 users:
   - name: me
     group: users
@@ -383,7 +383,7 @@ users:
 
 Path to your tarsnap key.
 
-```sh
+```yml
 tarsnap_keyfile: /etc/tarsnap/tarsnap.key
 ```
 
