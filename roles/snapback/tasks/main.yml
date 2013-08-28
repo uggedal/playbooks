@@ -7,3 +7,8 @@
 - name: configure snapback
   template: src=snapback.conf.j2 dest=/etc/snapback.conf
   tags: snapback
+
+- name: create cron entry for snapback backup
+  cron: name="snapback backup" cron_file=snapback-backup minute=30
+        job="/usr/bin/snapback backup" user=root
+  tags: snapback
