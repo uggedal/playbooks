@@ -387,6 +387,27 @@ Path to your tarsnap key.
 tarsnap_keyfile: /etc/tarsnap/tarsnap.key
 ```
 
+#### snapback
+
+### cmds
+
+List of commands to run which produces files to backup.
+
+```yml
+snapback_cmds:
+  - su - postgres -c 'pg_dump mysite' > mysite.sql
+```
+
+### paths
+
+List of paths to backup.
+
+```yml
+snapback_paths:
+  - /etc
+  - /srv/http/mysite/uploads
+```
+
 License
 -------
 
