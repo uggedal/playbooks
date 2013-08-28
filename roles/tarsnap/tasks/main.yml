@@ -1,0 +1,5 @@
+---
+
+- name: install tarsnap
+  pacman: name=tarsnap state=installed
+  tags: tarsnap
