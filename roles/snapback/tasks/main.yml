@@ -1,0 +1,5 @@
+---
+
+- name: install snapback
+  pacman: name=snapback state=installed
+  tags: snapback
