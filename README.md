@@ -367,6 +367,7 @@ List of users to create where the following fields are required:
 * `groups`: comma separated list of supplementary groups
 * `shell`: login shell
 * `authorized_key`: ssh authorized key
+* `autologin`: if `true` autologin the user on `tty1`
 
 ```yml
 users:
@@ -375,6 +376,7 @@ users:
     groups: adm
     shell: /bin/bash
     authorized_key: "ssh-rsa AABBCC...== me@mydomain.tld"
+    autologin: true
 ```
 
 #### tarsnap
