@@ -10,3 +10,16 @@
   authorized_key: user={{ item.name }} key="{{ item.authorized_key }}"
   with_items: users
   tags: user
+
+- name: prepare autologin for user
+  file: name=/etc/systemd/system/getty@tty1.service.d state=directory
+  with_items: users
+  when: item.autologin
+  tags: user
+
+- name: add autologin for user
+  template: src=autologin.conf.j2
+            dest=/etc/systemd/system/getty@tty1.service.d/autologin.conf
+  with_items: users
+  when: item.autologin
+  tags: user
