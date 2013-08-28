@@ -51,6 +51,7 @@
   gather_facts: no
   roles:
   - tarsnap
+  - snapback
 
 - hosts: ircclients
   gather_facts: no
