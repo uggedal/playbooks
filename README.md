@@ -377,6 +377,16 @@ users:
     authorized_key: "ssh-rsa AABBCC...== me@mydomain.tld"
 ```
 
+#### tarsnap
+
+### keyfile
+
+Path to your tarsnap key.
+
+```sh
+tarsnap_keyfile: /etc/tarsnap/tarsnap.key
+```
+
 License
 -------
 
