@@ -12,3 +12,8 @@
   cron: name="snapback backup" cron_file=snapback-backup minute=30
         job="/usr/bin/snapback backup" user=root
   tags: snapback
+
+- name: create cron entry for snapback prune
+  cron: name="snapback prune" cron_file=snapback-prune hour=5 minute=10
+        job="/usr/bin/snapback prune" user=root
+  tags: snapback
