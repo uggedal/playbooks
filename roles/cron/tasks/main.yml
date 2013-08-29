@@ -3,3 +3,7 @@
 - name: install cronie
   pacman: name=cronie state=installed
   tags: cron
+
+- name: start and enable cronie
+  service: name=cronie state=started enabled=yes
+  tags: cron
