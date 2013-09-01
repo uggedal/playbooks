@@ -13,3 +13,7 @@
 - name: remove pacman orphans
   pacmandb: state=no-orphans
   tags: pacman
+
+- name: install auxiliary pacman scripts
+  pacman: name=pacaux state=installed
+  tags: pacman
