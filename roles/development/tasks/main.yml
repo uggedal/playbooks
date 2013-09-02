@@ -59,7 +59,10 @@
   tags: development
 
 - name: install go development environment
-  pacman: name=go state=installed
+  pacman: name={{ item }} state=installed
+  with_items:
+    - go
+    - johnny-deps
   tags: development
 
 - name: install packaging environment
