@@ -1,0 +1,4 @@
+{{ nfs_exports.root }} {{ nfs_exports.client }}({{ nfs_exports.options }},fsid=root,no_subtree_check)
+{% for mount in nfs_exports.mounts %}
+{{ nfs_exports.root }}/{{ mount.target }} {{ mount.client }}({{ mount.options }},no_subtree_check,nohide)
+{% endfor %}

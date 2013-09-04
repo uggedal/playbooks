@@ -15,3 +15,9 @@
   with_items: nfs_exports.mounts
   when: "'nfsservers' in group_names"
   tags: nfs
+
+- name: configure nfs exports
+  template: src=exports.j2 dest=/etc/exports
+  notify: reload exportfs
+  when: "'nfsservers' in group_names"
+  tags: nfs

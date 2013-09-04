@@ -1,0 +1,4 @@
+---
+
+- name: reload exportfs
+  command: /usr/bin/exportfs -ar
