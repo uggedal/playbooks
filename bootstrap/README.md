@@ -102,3 +102,9 @@ Raspberry Pi
     curl -L http://archlinuxarm.org/os/ArchLinuxARM-rpi-latest.zip | 7z x -si
     dd bs=1M if=archlinux-hf-*.img of=/dev/mmcblk0
     ```
+
+2. Plug in the SD card, connect power and connect over SSH:
+
+    ```sh
+    ssh root@192.168.1.X
+    ```
