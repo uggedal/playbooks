@@ -21,3 +21,9 @@
   notify: reload exportfs
   when: "'nfsservers' in group_names"
   tags: nfs
+
+- name: create mounts on nfs client
+  mount: name={{ item.target }} src={{ item.source }}
+         fstype=nfs4 opts={{ item.options }} state=present
+  with_items: nfs_mounts
+  when: "'nfsclients' in group_names"
