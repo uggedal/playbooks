@@ -64,6 +64,11 @@
   roles:
   - irssi
 
+- hosts: nfsclients
+  gather_facts: no
+  roles:
+  - nfs
+
 - hosts: developmentenvironments
   gather_facts: no
   roles:
