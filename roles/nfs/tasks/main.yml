@@ -8,3 +8,10 @@
   file: name={{ nfs_exports.root }} state=directory
   when: "'nfsservers' in group_names"
   tags: nfs
+
+- name: create bind mounts for nfs exports
+  mount: name={{ nfs_exports.root }}/{{ item.target }} src={{ item.source }}
+         fstype=none opts=bind state=mounted
+  with_items: nfs_exports.mounts
+  when: "'nfsservers' in group_names"
+  tags: nfs
