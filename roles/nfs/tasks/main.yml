@@ -27,3 +27,12 @@
          fstype=nfs4 opts={{ item.options }} state=present
   with_items: nfs_mounts
   when: "'nfsclients' in group_names"
+
+  tags: nfs
+- name: start and enable nfs server services
+  service: name={{ item }} state=started enabled=yes
+  with_items:
+    - rpc-idmapd
+    - rpc-mountd
+  when: "'nfsservers' in group_names"
+  tags: nfs
