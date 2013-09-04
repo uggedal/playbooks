@@ -43,7 +43,11 @@ CheckSpace
 
 # By default, pacman accepts packages signed by keys that its local keyring
 # trusts (see pacman-key and its man page), as well as unsigned packages.
+{% if 'armv6h' in group_names %}
+SigLevel    = Never
+{% else %}
 SigLevel    = Required DatabaseOptional
+{% endif %}
 LocalFileSigLevel = Optional
 #RemoteFileSigLevel = Required
 
