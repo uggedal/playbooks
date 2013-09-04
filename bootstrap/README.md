@@ -120,3 +120,10 @@ Raspberry Pi
     pacman -Sc --noconfirm
     pacman -S omxplayer-git
     ```
+
+4. Reboot.
+5. Copy your ssh public key to the machine:
+
+    ```sh
+    ssh-copy-id root@yourhost
+    ```
