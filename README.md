@@ -93,13 +93,23 @@ systemd_logind_ignore_lid_switch: true
 
 ##### repos
 
-A list of custom pacman repositories. The package signature level will be
-optional for these.
+A list of custom pacman repositories where:
+
+* `name` is self-explanatory
+* `server` can point to a custom server or be `null` to use the mirrorlist
+* `siglevel` can override the default signature level
 
 ```yml
 pacman_repos:
+  - name: core
+    server: null
+  - name: extra
+    server: null
+  - name: community
+    server: null
   - name: myrepo
-    url: http://repo.myhost.com
+    siglevel = Optional
+    server: http://repo.myhost.com
 ```
 
 ##### mirrors
