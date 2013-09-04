@@ -43,6 +43,11 @@
   roles:
   - qemu
 
+- hosts: nfsservers
+  gather_facts: no
+  roles:
+  - nfs
+
 - hosts: ansibleclients
   gather_facts: no
   roles:
