@@ -127,3 +127,10 @@ Raspberry Pi
     ```sh
     ssh-copy-id root@yourhost
     ```
+
+6. Provision the host with ansible:
+
+    ```sh
+    ./play
+    ```
+
