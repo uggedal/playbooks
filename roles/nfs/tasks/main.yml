@@ -36,3 +36,8 @@
     - rpc-mountd
   when: "'nfsservers' in group_names"
   tags: nfs
+
+- name: start and enable nfs client service
+  service: name=rpc-gssd state=started enabled=yes
+  when: "'nfsclients' in group_names"
+  tags: nfs
