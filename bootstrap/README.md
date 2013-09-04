@@ -108,3 +108,15 @@ Raspberry Pi
     ```sh
     ssh root@192.168.1.X
     ```
+
+3. Configure basics:
+
+    ```sh
+    passwd
+    pacman -Syu
+    pacman -S --noconfirm git binutils
+    curl https://raw.github.com/Hexxeh/rpi-update/master/rpi-update | bash
+    pacman -Rs --noconfirm git binutils
+    pacman -Sc --noconfirm
+    pacman -S omxplayer-git
+    ```
