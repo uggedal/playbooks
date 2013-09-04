@@ -95,3 +95,10 @@ MacBook Pro 8,2
 
 Raspberry Pi
 ------------
+
+1. Download and write the image to an SD card:
+
+    ```sh
+    curl -L http://archlinuxarm.org/os/ArchLinuxARM-rpi-latest.zip | 7z x -si
+    dd bs=1M if=archlinux-hf-*.img of=/dev/mmcblk0
+    ```
