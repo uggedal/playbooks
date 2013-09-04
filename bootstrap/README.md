@@ -133,4 +133,3 @@ Raspberry Pi
     ```sh
     ./play
     ```
-
