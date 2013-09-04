@@ -113,6 +113,16 @@ Raspberry Pi
 
     ```sh
     passwd
+    pacman -Rs --noconfirm \
+      cryptsetup \
+      heirloom-mailx \
+      jfsutils \
+      lvm2 \
+      mdadm \
+      nano \
+      netctl \
+      reiserfsprogs \
+      xfsprogs
     pacman -Syu
     pacman -S --noconfirm git binutils
     curl https://raw.github.com/Hexxeh/rpi-update/master/rpi-update | bash
