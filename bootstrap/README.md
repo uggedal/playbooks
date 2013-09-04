@@ -92,3 +92,6 @@ MacBook Pro 8,2
     git remote add -t \* -f origin git@github.com:uggedal/dotfiles.git
     git checkout master
     ```
+
+Raspberry Pi
+------------
