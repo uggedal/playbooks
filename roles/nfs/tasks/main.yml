@@ -3,3 +3,8 @@
 - name: install nfs utils
   pacman: name=nfs-utils state=installed
   tags: nfs
+
+- name: create nfs export root
+  file: name={{ nfs_exports.root }} state=directory
+  when: "'nfsservers' in group_names"
+  tags: nfs
