@@ -118,7 +118,7 @@ Raspberry Pi
     curl https://raw.github.com/Hexxeh/rpi-update/master/rpi-update | bash
     pacman -Rs --noconfirm git binutils
     pacman -Sc --noconfirm
-    pacman -S omxplayer-git
+    pacman -S omxplayer-git python2
     ```
 
 4. Reboot.
