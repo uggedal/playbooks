@@ -14,7 +14,8 @@ events {
 
 http {
   server_tokens off;
-  msie_padding  off;
+  msie_padding off;
+  keepalive_disable none;
 
   include       mime.types;
   default_type  application/octet-stream;
