@@ -15,6 +15,7 @@ events {
 http {
   server_tokens off;
   msie_padding off;
+  reset_timedout_connection on;
   keepalive_disable none;
 
   include       mime.types;
