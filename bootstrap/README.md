@@ -112,33 +112,25 @@ Raspberry Pi
 3. Configure basics:
 
     ```sh
-    passwd
-    pacman -Rs --noconfirm \
-      cryptsetup \
-      heirloom-mailx \
-      jfsutils \
-      lvm2 \
-      mdadm \
-      nano \
-      netctl \
-      reiserfsprogs \
-      xfsprogs
-    pacman -Syu
-    pacman -S --noconfirm git binutils
-    curl https://raw.github.com/Hexxeh/rpi-update/master/rpi-update | bash
-    pacman -Rs --noconfirm git binutils
-    pacman -Sc --noconfirm
-    pacman -S omxplayer-git ttf-freefont python2
+    curl -LO https://github.com/uggedal/playbooks/raw/master/bootstrap/rpi.sh
+    vi rpi.sh
+    sh rpi.sh
     ```
 
-4. Reboot.
-5. Copy your ssh public key to the machine:
+4. Set a root password:
+
+    ```sh
+    passwd
+    ```
+
+5. Reboot.
+6. Copy your ssh public key to the machine:
 
     ```sh
     ssh-copy-id root@yourhost
     ```
 
-6. Provision the host with ansible:
+7. Provision the host with ansible:
 
     ```sh
     ./play
