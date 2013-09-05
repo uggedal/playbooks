@@ -35,12 +35,16 @@ Various server roles can be enabled through these groups:
 * qemuservers
 * nfsservers
 
-Lastly client roles can be enabled through these groups:
+Different client roles can be enabled through these groups:
 
 * ansibleclients
 * tarsnapclients
 * ircclients
 * nfsclients
+
+Lastly you can setup a development environment with this group:
+
+* developmentenvironments
 
 The `servers` and `laptops` groups are used to differentiate behavior
 within some roles:
