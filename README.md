@@ -46,13 +46,17 @@ Lastly you can setup a development environment with this group:
 
 * `developmentenvironments`
 
-The `servers` and `laptops` groups are used to differentiate behavior
-within some roles:
+Some of these groups are used to differentiate behavior within some roles:
 
 #### ntp
 
 `servers` will strart and enable the `ntpd` service while `laptops` will
 enable and run the `ntpdate` *oneshot* service on boot.
+
+#### pacman
+
+`x86_64` will enable package signing for the official repositories while
+`armv6h` will disable signing.
 
 ### Variables
 
