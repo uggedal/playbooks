@@ -35,6 +35,10 @@ Various server roles can be enabled through these groups:
 * qemuservers
 * nfsservers
 
+Lastly client roles can be enabled through these groups:
+
+* ansibleclients
+
 The `servers` and `laptops` groups are used to differentiate behavior
 within some roles:
 
