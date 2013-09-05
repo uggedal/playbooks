@@ -38,6 +38,7 @@ Various server roles can be enabled through these groups:
 Lastly client roles can be enabled through these groups:
 
 * ansibleclients
+* tarsnapclients
 
 The `servers` and `laptops` groups are used to differentiate behavior
 within some roles:
