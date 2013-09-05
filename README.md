@@ -391,7 +391,7 @@ users:
 
 #### tarsnap
 
-### keyfile
+##### keyfile
 
 Path to your tarsnap key.
 
@@ -401,7 +401,7 @@ tarsnap_keyfile: /etc/tarsnap/tarsnap.key
 
 #### snapback
 
-### cmds
+##### cmds
 
 List of commands to run which produces files to backup.
 
@@ -410,7 +410,7 @@ snapback_cmds:
   - su - postgres -c 'pg_dump mysite' > mysite.sql
 ```
 
-### paths
+##### paths
 
 List of paths to backup.
 
