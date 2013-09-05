@@ -33,6 +33,7 @@ Various server roles can be enabled through these groups:
 * redisservers
 * postgresqlservers
 * qemuservers
+* nfsservers
 
 The `servers` and `laptops` groups are used to differentiate behavior
 within some roles:
