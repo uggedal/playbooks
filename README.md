@@ -18,33 +18,33 @@ ansible-playbook -i ../private-inventory/hosts site.yml
 
 The following top level groups are available:
 
-* servers
-* laptops
+* `servers`
+* `laptops`
 
 You should also place your hosts in one of the following architecture groups:
 
-* x86_64
-* armv6h
+* `x86_64`
+* `armv6h`
 
 Various server roles can be enabled through these groups:
 
-* wsgiservers
-* httpservers
-* redisservers
-* postgresqlservers
-* qemuservers
-* nfsservers
+* `wsgiservers`
+* `httpservers`
+* `redisservers`
+* `postgresqlservers`
+* `qemuservers`
+* `nfsservers`
 
 Different client roles can be enabled through these groups:
 
-* ansibleclients
-* tarsnapclients
-* ircclients
-* nfsclients
+* `ansibleclients`
+* `tarsnapclients`
+* `ircclients`
+* `nfsclients`
 
 Lastly you can setup a development environment with this group:
 
-* developmentenvironments
+* `developmentenvironments`
 
 The `servers` and `laptops` groups are used to differentiate behavior
 within some roles:
