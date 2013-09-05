@@ -16,14 +16,17 @@ ansible-playbook -i ../private-inventory/hosts site.yml
 
 ### Groups
 
-The following groups are available:
+The following top level groups are available:
 
 * servers
+* laptops
+
+Various server roles can be enabled through these groups:
+
 * wsgiservers
 * httpservers
 * redisservers
 * postgresqlservers
-* laptops
 
 The `servers` and `laptops` groups are used to differentiate behavior
 within some roles:
