@@ -117,20 +117,26 @@ Raspberry Pi
     sh rpi.sh
     ```
 
-4. Set a root password:
+4. Reboot.
+5. Resize the root fs:
+
+    ```sh
+    resize2fs /dev/mmcblk0p5
+    ```
+
+6. Set a root password:
 
     ```sh
     passwd
     ```
 
-5. Reboot.
-6. Copy your ssh public key to the machine:
+7. Copy your ssh public key to the machine:
 
     ```sh
     ssh-copy-id root@yourhost
     ```
 
-7. Provision the host with ansible:
+8. Provision the host with ansible:
 
     ```sh
     ./play

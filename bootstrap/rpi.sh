@@ -27,3 +27,20 @@ pacman -Sc --noconfirm
 
 # Install essentials
 pacman -S omxplayer-git ttf-freefont python2
+
+# Resize root partition
+fdisk /dev/mmcblk0 <<EOF
+d
+2
+n
+e
+
+
+
+n
+l
+
+
+w
+EOF
+sync
