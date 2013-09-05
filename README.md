@@ -21,6 +21,11 @@ The following top level groups are available:
 * servers
 * laptops
 
+You should also place your hosts in one of the following architecture groups:
+
+* x86_64
+* armv6h
+
 Various server roles can be enabled through these groups:
 
 * wsgiservers
