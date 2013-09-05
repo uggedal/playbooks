@@ -474,6 +474,21 @@ nfs_exports:
       options: ro
 ```
 
+##### mounts
+
+List of NFS exports to setup in `/etc/fstab` on a client where:
+
+* `source`: server and export point
+* `target`: where to mount export point
+* `options`: mount options
+
+```yml
+nfs_mounts:
+  - source: 192.168.1.50:/videos
+    target: /mnt
+    options: noauto,noatime,rsize=32768,wsize=32768,intr,_netdev
+```
+
 License
 -------
 
