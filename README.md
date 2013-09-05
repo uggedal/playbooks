@@ -445,6 +445,35 @@ snapback_paths:
   - /srv/http/mysite/uploads
 ```
 
+#### nfs
+
+##### exports
+
+Configures NFS exports where:
+
+* `root`: where to bind mount export points
+* `client`: toplevel client access
+* `options`: toplevel export options which are prepended to
+  the `fsid=root,no_subtree_check` defaults
+* `mounts`: list of export points where:
+    - `source`: directory to bind mount into `root`
+    - `target`: directory name of bind mount in `root`
+    - `client`: export point client access
+    - `options`: export point options which are prepended to
+      the `no_subtree_check,nohide` defaults
+
+```yml
+nfs_exports:
+  root: /srv/nfs4
+  client: 192.168.1.50
+  options: ro
+  mounts:
+    - source: /home/me/videos
+      target: videos
+      client: 192.168.1.50
+      options: ro
+```
+
 License
 -------
 
