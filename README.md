@@ -3,6 +3,8 @@ Playbooks
 
 [Ansible][a] playbooks for [uggedal.com][u]. Developed for Arch Linux.
 
+Currently manages a Macbook Pro, several Linode instances and a Raspberry Pi.
+
 Inventory
 ---------
 
