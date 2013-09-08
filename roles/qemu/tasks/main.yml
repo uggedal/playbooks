@@ -5,6 +5,6 @@
   tags: qemu
 
 - name: autoload kvm module
-  copy: src=kvm.conf dest=/etc/modprobe.d/kvm.conf
+  copy: src=kvm.conf dest=/etc/modules-load.d/kvm.conf
   notify: load kvm module into kernel
   tags: qemu
