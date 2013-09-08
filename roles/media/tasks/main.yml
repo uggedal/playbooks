@@ -6,7 +6,6 @@
     - alsa-utils
     - mplayer-vaapi
     - libva-intel-driver
-    - libva-vdpau-driver
     - spotify
     - python2-youtube-dl
     - sxiv
