@@ -1,0 +1,18 @@
+---
+
+- name: install ifplugd
+  pacman: name=ifplugd state=installed
+  tags: ifplugd
+
+- name: configure ifplugd
+  template: src=ifplugd.conf.j2 dest=/etc/ifplugd/ifplugd.conf
+  tags: ifplugd
+
+- name: add ifplugd action
+  copy: src=ifplugd.action dest=/etc/ifplugd/ifplugd.action mode=755
+  notify: realize redis sysctl config
+  tags: ifplugd
+
+- name: start and enable ifplugd service
+  service: name=ifplugd@{{ ifplug_interface }} state=running enabled=yes
+  tags: ifplugd
