@@ -11,6 +11,7 @@
   - cron
   - logrotate
   - user
+  - readline
 
 - hosts: servers
   gather_facts: no
