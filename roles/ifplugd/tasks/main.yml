@@ -14,5 +14,5 @@
   tags: ifplugd
 
 - name: start and enable ifplugd service
-  service: name=ifplugd@{{ ifplug_interface }} state=running enabled=yes
+  service: name=ifplugd@{{ ifplugd_interface }} state=running enabled=yes
   tags: ifplugd
