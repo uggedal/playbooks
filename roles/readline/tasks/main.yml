@@ -1,0 +1,5 @@
+---
+
+- name: configure readline
+  copy: src=inputrc dest=/etc/inputrc
+  tags: readline
