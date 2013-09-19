@@ -371,6 +371,16 @@ The wireless interface swifer should operate on.
 swifer_interface: wlan0
 ```
 
+#### ifplugd
+
+##### interface
+
+The wired interface ifplugd should listen on.
+
+```yml
+ifplugd_interface: wlan0
+```
+
 ##### networks
 
 List of networks to configure for swifer where:
