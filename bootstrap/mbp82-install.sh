@@ -101,7 +101,7 @@ cat > /boot/loader/entries/radeon.conf <<EOF
 title radeon (efi_stub)
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options cryptdevice=$ROOTDEV:$CRYPT root=$CRYPTDEV ro quiet init=/usr/lib/systemd/systemd libahci.ignore_sss=1 elevator=noop radeon.audio=1
+options cryptdevice=$ROOTDEV:$CRYPT root=$CRYPTDEV ro quiet init=/usr/lib/systemd/systemd libahci.ignore_sss=1 elevator=noop radeon.audio=1 radeon.dpm=1
 EOF
 cat > /boot/loader/entries/i915.conf <<EOF
 title i915 (grub)
