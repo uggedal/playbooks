@@ -80,6 +80,7 @@
   roles:
   - acpid
   - swifer
+  - ifplugd
   - x
   - font
   - vm
