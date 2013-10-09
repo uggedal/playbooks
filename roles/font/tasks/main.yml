@@ -4,6 +4,7 @@
   pacman: name={{ item }} state=installed
   with_items:
     - terminus-font
+    - gohufont
     - ttf-dejavu
     - ttf-gentium
     - ttf-ms-win8
