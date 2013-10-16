@@ -4,7 +4,7 @@
   pacman: name={{ item }} state=installed
   with_items:
     - alsa-utils
-    - mplayer-vaapi
+    - mpv
     - libva-intel-driver
     - spotify
     - python2-youtube-dl
