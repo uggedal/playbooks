@@ -8,7 +8,6 @@ pcre_jit   on;
 events {
   worker_connections  1024;
   accept_mutex {% if nginx_worker_processes > 1 %}on{% else %}off{% endif %};
-  use epoll;
 }
 
 
